@@ -1,0 +1,25 @@
+[alias]
+	st = status
+	pl = pull
+	pu = push -u
+	pf = push --force-with-lease
+	pd = push --delete
+	br = branch
+	co = checkout
+	cm = commit
+	tar = archive --format=tar
+	df = diff
+	dfq = diff --quiet
+	dfn = diff --name-only
+	dt = difftool
+	cur-br = rev-parse --abbrev-ref @
+	cpk = cherry-pick
+	hrst = reset --hard
+	srst = reset --soft
+	rst = reset
+	rb = rebase
+	ri = rebase -i
+	sw = switch
+	fc = fetch
+	fcp = fetch -p
+

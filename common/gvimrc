@@ -1,0 +1,33 @@
+" My gvimrc
+" vim:set ts=8 sts=2 sw=2 tw=0:
+
+colorscheme industry
+
+" Set GUI font
+" https://qiita.com/kroton/items/fec944389d11c1e16fe4
+if has('win32') || has('win64')
+  set guifont=Ricty_Diminished_Discord:h12:cSHIFTJIS:qDRAFT
+endif
+
+if has('mac') || has('gui_macvim')
+  set guifont=Ricty\ Diminished\ Discord\ Regular:h14
+endif
+
+" Hidden menu-bar && tool-bar
+set guioptions-=T
+set guioptions-=m
+
+" Hidden scroll-bar on the left && right
+set guioptions-=r
+set guioptions-=R
+set guioptions-=l
+set guioptions-=L
+
+" Hidden horizontal scroll-bar
+set guioptions-=b
+
+" View settings
+if has('win32') || has('win64')
+  autocmd GUIEnter * set transparency=200
+endif
+

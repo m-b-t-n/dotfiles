@@ -1,0 +1,46 @@
+# ls command aliases
+alias l='ls -G'
+alias ls='ls -G'
+alias ll='ls -laG'
+
+# Git Prompt
+if [ -f /usr/local/git/git-completion.bash ]; then
+	source /usr/local/git/git-completion.bash
+elif [ -f /usr/local/git/contrib/completion/git-completion.bash ]; then
+	source /usr/local/git/contrib/completion/git-completion.bash
+fi
+
+if [ -f /usr/local/git/git-prompt.sh ]; then
+	source /usr/local/git/git-prompt.sh
+elif [ -f /usr/local/git/contrib/completion/git-prompt.sh ]; then
+	source /usr/local/git/contrib/completion/git-prompt.sh
+fi
+
+GIT_PS1_SHOWDIRTYSTATE=true
+
+# Homebrew
+if which brew > /dev/null; then
+	brew_exec_additional="/usr/local/sbin"
+	brew_exec_pathes="PATH=${brew_exec_additional}:${PATH/\/usr\/local\/pyenv\/shims:/}"
+	alias brew="env ${brew_exec_pathes} brew"
+fi
+
+# Node.js
+export PATH="$PATH:/Users/$(whoami)/.nodebrew/current/bin"
+
+# Python(pyenv)
+export PYENV_ROOT="/usr/local/var/pyenv"
+if which pyenv > /dev/null; then
+	eval "$(pyenv init -)";
+fi
+
+# ranger
+source ~/dotfiles/common/ranger/ranger.sh
+alias r='_ranger'
+
+# tmux
+alias tm='tmux new-session \; source-file ~/dotfiles/common/tmux/tmux.startup'
+alias tml='tmux ls'
+alias tma='tmux attach'
+alias tmd='tmux detach'
+

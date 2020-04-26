@@ -1,0 +1,5 @@
+# Load Initial Window Settings
+
+if-shell "uname | grep -q Linux" "source-file ~/dotfiles/ubuntu/tmux/tmux.window.initial"
+if-shell "hostname | grep -q Mac-mini" "source-file ~/dotfiles/osx/tmux/tmux.window.initial.macmini"
+

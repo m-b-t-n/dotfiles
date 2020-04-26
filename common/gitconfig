@@ -1,0 +1,10 @@
+[Include]
+	path = ~/dotfiles/common/git/gitconfig.alias
+	path = ~/gitconfig.user
+
+[core]
+	editor = $(which vim)
+	quotepath = false
+
+[color]
+	ui = auto

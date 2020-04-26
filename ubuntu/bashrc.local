@@ -1,0 +1,27 @@
+# Color Settings
+# export TERM=xterm-256color
+
+# For "__git_ps1"
+# <http://d.hatena.ne.jp/gnarl/20110901/1314846241>
+GIT_PS1_SHOWDIRTYSTATE=1
+# GIT_PS1_SHOWUPSTREAM=1
+GIT_PS1_SHOWUNTRACKEDFILES=1
+# GIT_PS1_SHOWSTASHSTATE=1
+
+# ls aliases
+alias lstty='ls /dev | grep USB'
+alias ll='ls -lF'
+alias la='ls -AF'
+alias l='ls -CF'
+alias lla='ls -laF'
+alias llh='ls -lhF'
+alias llah='ls -lahF'
+
+# ranger
+source $HOME/dotfiles/common/ranger/ranger.sh
+alias r='_ranger'
+alias tm='tmux new-session \; source-file ~/dotfiles/common/tmux/tmux.startup'
+alias tml='tmux ls'
+alias tma='tmux attach'
+alias tmd='tmux detach'
+

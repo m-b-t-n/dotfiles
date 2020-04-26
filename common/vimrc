@@ -1,0 +1,74 @@
+" My vimrc
+" vim:set ts=8 sts=2 sw=2 tw=0:
+set nocompatible
+
+" Set for Windows environment
+if has('win32') || has('win64')
+  "let $HOME='system('echo "C:/Users/$(whoami)"')'
+  let g:coc_node_path="C:/Program\ Files/nodejs/node.exe"
+endif
+
+" Set for macOS environment
+if has('mac')
+  let g:coc_node_path="~/.nodebrew/current/bin/node"
+endif
+
+" Plugins dir
+let s:plugin_dir = expand('~/.vim/bundle/')
+" Add runtimepath the dir to install dein.vim
+let s:dein_dir = s:plugin_dir . 'repos/github.com/Shougo/dein.vim'
+execute 'set runtimepath+=' . s:dein_dir
+
+" If not installed dein.vim, install when vim is opened
+augroup PluginInstall
+  autocmd!
+    autocmd VimEnter * if dein#check_install() | call dein#install() | endif
+augroup END
+
+if !isdirectory(s:dein_dir)
+      call mkdir(s:dein_dir, 'p')
+        silent execute printf('!git clone %s %s', 'https://github.com/Shougo/dein.vim', s:dein_dir)
+endif
+
+if dein#load_state(s:plugin_dir)
+  call dein#begin(s:plugin_dir)
+
+  call dein#add('scrooloose/nerdtree')
+  call dein#add('neoclide/coc.nvim', {'merged':0, 'rev': 'release'})
+  call dein#add('wsdjeg/dein-ui.vim', {'depends' : 'Shougo/dein.vim'})
+
+  call dein#end()
+  call dein#save_state()
+endif
+
+filetype plugin indent on
+
+" Global Settings
+set title
+set number
+set tabstop=8
+set autoindent
+set smartindent
+set showmatch
+set matchtime=1
+set t_Co=256
+set clipboard=unnamed,autoselect
+set list
+set listchars=tab:>\ ,trail:_,nbsp:%,extends:>,precedes:<
+set cursorline
+set laststatus=2
+set background=dark
+set incsearch
+set ruler
+syntax on
+set hidden
+set nowritebackup
+set noundofile
+set nobackup
+set cmdheight=2
+
+" NERDTree Settings
+let NERDTreeShowHidden = 1
+"autocmd VimEnter * execute 'NERDTree'
+autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | execute 'NERDTree' | endif
+
