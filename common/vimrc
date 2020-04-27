@@ -36,6 +36,7 @@ if dein#load_state(s:plugin_dir)
   call dein#add('scrooloose/nerdtree')
   call dein#add('neoclide/coc.nvim', {'merged':0, 'rev': 'release'})
   call dein#add('wsdjeg/dein-ui.vim', {'depends' : 'Shougo/dein.vim'})
+  call dein#add('aklt/plantuml-syntax')
 
   call dein#end()
   call dein#save_state()
@@ -66,6 +67,9 @@ set nowritebackup
 set noundofile
 set nobackup
 set cmdheight=2
+
+" PlantUML Settings
+let g:plantuml_executable_script = expand('$HOME/dotfiles/common/plantuml/txt2plantuml.sh')
 
 " NERDTree Settings
 let NERDTreeShowHidden = 1
