@@ -28,6 +28,6 @@ set guioptions-=b
 
 " View settings
 if has('win32') || has('win64')
-  autocmd GUIEnter * set transparency=200
+  autocmd GUIEnter * set transparency=230
 endif
 
