@@ -67,6 +67,7 @@ set nowritebackup
 set noundofile
 set nobackup
 set cmdheight=2
+set fileencodings=utf-8,sjis,cp932,euc-jp
 
 " PlantUML Settings
 let g:plantuml_executable_script = expand('$HOME/dotfiles/common/plantuml/txt2plantuml.sh')
