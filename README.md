@@ -4,6 +4,30 @@
 
 わたしの dotfiles です。
 
+## 事前条件
+
+### 共通
+
+* [Ricty](https://rictyfonts.github.io/)
+
+* [Node.js](https://nodejs.org/en/)
+
+### Windows
+
+* [Git for Windows](https://git-scm.com/download/win)
+
+### macOS
+
+```
+$ bash --version
+GNU bash, version 3.2.57(1)-release (x86_64-apple-darwin18)
+Copyright (C) 2007 Free Software Foundation, Inc.
+```
+
+### Linux
+
+* 確認中
+
 ## セットアップ
 
 * `$HOME` ディレクトリ以下で下記を実行してください。
@@ -66,6 +90,30 @@ $ bash dotfiles/test_setup.sh
 # README
 
 They are my dotfiles.  
+
+## Pre-requirements
+
+### Common
+
+* [Ricty](https://rictyfonts.github.io/)
+
+* [Node.js](https://nodejs.org/en/)
+
+### Windows
+
+* [Git for Windows](https://git-scm.com/download/win)
+
+### macOS
+
+```sh
+$ bash --version
+GNU bash, version 3.2.57(1)-release (x86_64-apple-darwin18)
+Copyright (C) 2007 Free Software Foundation, Inc.
+```
+
+### Linux
+
+* Under checking...
 
 ## How to setup
 
