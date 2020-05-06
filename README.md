@@ -69,7 +69,7 @@ They are my dotfiles.
 
 ## How to setup
 
-Run `setup.sh` on your HOME directory.
+Run `setup.sh` on your `$HOME` directory.
 
 ```sh
 $ bash dotfiles/setup.sh
@@ -77,7 +77,7 @@ $ bash dotfiles/setup.sh
 
 ## How to test setup.sh
 
-Run `test_setup.sh`.
+Run `test_setup.sh` on your `$HOME` directory.
 
 ```sh
 $ bash dotfiles/test_setup.sh
@@ -89,9 +89,9 @@ You can check the result by seeing `dotfiles/test_setup.sh.log`.
 
 * Basic idea is to share dotfiles among Windows, macOS, Linux
 
-  - Entry point of each dotfiles is placed under "common/" dir.
+  - Entry point of each dotfiles is placed under `common/` dir.
 
-  - In case of OS-unique settings, describe to "bashrc.local" of each subdirs.
+  - In case of addition OS-unique settings, place dotfiles to each subdirs and include by `common/` side.
 
 ```
 ├── README.md
