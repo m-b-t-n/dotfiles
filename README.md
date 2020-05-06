@@ -8,6 +8,15 @@
 
 ### 共通
 
+* `$HOME/gitconfig.user` にユーザ設定を記述します。下記はサンプルです
+
+```sh
+$ cat ~/gitconfig.user
+[user]
+	email = mbtn_0xff@outlook.com
+	name = m-b-t-n
+```
+
 * [Ricty](https://rictyfonts.github.io/)
 
 * [Node.js](https://nodejs.org/en/)
@@ -94,6 +103,15 @@ They are my dotfiles.
 ## Pre-requirements
 
 ### Common
+
+* Set user settings in `$HOME/gitconfig.user`. The sample is following;
+
+```sh
+$ cat ~/gitconfig.user
+[user]
+	email = mbtn_0xff@outlook.com
+	name = m-b-t-n
+```
 
 * [Ricty](https://rictyfonts.github.io/)
 
