@@ -22,6 +22,8 @@ alias HH-MM-SS='date +"%H-%M-%S"'
 
 alias :b='vim -b'
 alias :e='vim'
+alias :esp='vim -o'
+alias :evsp='vim -O'
 alias :r='vim -R'
 alias :q='exit'
 alias vd='vimdiff'
