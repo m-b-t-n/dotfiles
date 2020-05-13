@@ -37,6 +37,8 @@ if dein#load_state(s:plugin_dir)
   call dein#add('neoclide/coc.nvim', {'merged':0, 'rev': 'release'})
   call dein#add('wsdjeg/dein-ui.vim', {'depends' : 'Shougo/dein.vim'})
   call dein#add('aklt/plantuml-syntax')
+  call dein#add('vim-airline/vim-airline')
+  call dein#add('vim-airline/vim-airline-themes', {'depends' : 'vim-airline/vim-airline'})
 
   call dein#end()
   call dein#save_state()
