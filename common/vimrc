@@ -39,6 +39,10 @@ if dein#load_state(s:plugin_dir)
   call dein#add('aklt/plantuml-syntax')
   call dein#add('vim-airline/vim-airline')
   call dein#add('vim-airline/vim-airline-themes', {'depends' : 'vim-airline/vim-airline'})
+  call dein#add('tyru/open-browser.vim')
+  call dein#add('godlygeek/tabular')
+  call dein#add('plasticboy/vim-markdown', {'depends' : 'godlygeek/tabular'})
+  call dein#add('previm/previm')
 
   call dein#end()
   call dein#save_state()
@@ -73,6 +77,20 @@ set fileencodings=utf-8,sjis,cp932,euc-jp
 
 " PlantUML Settings
 let g:plantuml_executable_script = expand('$HOME/dotfiles/common/plantuml/txt2plantuml.sh')
+
+" Markdown Settings
+augroup MarkdownSettings
+  autocmd!
+  autocmd BufNewFile,BufRead *.{md,mkd} set filetype=markdown
+  nnoremap <silent> <C-p> :PrevimOpen<CR>
+  let g:vim_markdown_folding_disabled = 1
+  let g:previm_enable_realtime = 1
+  if has('win32') || ('win64')
+    let g:previm_open_cmd = 'C:\\Program\ Files\ (x86)\\Mozilla\ Firefox\\firefox.exe'
+  else
+    " currently do nothing
+  endif
+augroup END
 
 " NERDTree Settings
 let NERDTreeShowHidden = 1
