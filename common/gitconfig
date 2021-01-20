@@ -6,5 +6,8 @@
 	editor = $(which vim)
 	quotepath = false
 
+[pull]
+	rebase = false
+
 [color]
 	ui = auto
