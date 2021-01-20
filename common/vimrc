@@ -43,6 +43,7 @@ if dein#load_state(s:plugin_dir)
   call dein#add('godlygeek/tabular')
   call dein#add('plasticboy/vim-markdown', {'depends' : 'godlygeek/tabular'})
   call dein#add('previm/previm')
+  call dein#add('reireias/vim-cheatsheet')
 
   call dein#end()
   call dein#save_state()
@@ -77,6 +78,9 @@ set fileencodings=utf-8,sjis,cp932,euc-jp
 
 " PlantUML Settings
 let g:plantuml_executable_script = expand('$HOME/dotfiles/common/plantuml/txt2plantuml.sh')
+
+" Cheetsheat
+let g:cheatsheet#cheat_file = '~/dotfiles/common/vim/cheatsheet.md'
 
 " Markdown Settings
 augroup MarkdownSettings
