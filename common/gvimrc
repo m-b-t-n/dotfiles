@@ -1,7 +1,7 @@
 " My gvimrc
 " vim:set ts=8 sts=2 sw=2 tw=0:
 
-colorscheme industry
+colorscheme desert
 
 " Set GUI font
 " https://qiita.com/kroton/items/fec944389d11c1e16fe4
