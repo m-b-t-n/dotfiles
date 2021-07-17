@@ -27,10 +27,23 @@ $ cat ~/gitconfig.user
 
 ### macOS
 
-```
+```sh
 $ bash --version
 GNU bash, version 3.2.57(1)-release (x86_64-apple-darwin18)
 Copyright (C) 2007 Free Software Foundation, Inc.
+```
+
+Tips:
+macOS でより新しい bash を使うための操作  
+homebrew を用いて導入した bash を使うように設定変更します。
+
+```sh
+$ brew install bash
+$ INSTALLED_VERSION=5.1.8 ## ここはインストールしたときの ver. 番号を埋める
+$ BASH_PATH="/usr/local/Cellar/bash/${INSTALLED_VERSION}/bin/bash"
+$ sudo echo ${BASH_PATH} >> /etc/shell
+$ sudo chsh -s ${BASH_PATH} ${USER}
+$ sudo reboot
 ```
 
 ### Linux
@@ -127,6 +140,19 @@ $ cat ~/gitconfig.user
 $ bash --version
 GNU bash, version 3.2.57(1)-release (x86_64-apple-darwin18)
 Copyright (C) 2007 Free Software Foundation, Inc.
+```
+
+Tips:
+Following instructions are for using newly bash on macOS.  
+Modify settings as the bash installed by homebrew.
+
+```sh
+$ brew install bash
+$ INSTALLED_VERSION=5.1.8 ## ここはインストールしたときの ver. 番号を埋める
+$ BASH_PATH="/usr/local/Cellar/bash/${INSTALLED_VERSION}/bin/bash"
+$ sudo echo ${BASH_PATH} >> /etc/shell
+$ sudo chsh -s ${BASH_PATH} ${USER}
+$ sudo reboot
 ```
 
 ### Linux
