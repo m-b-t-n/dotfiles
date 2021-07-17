@@ -44,6 +44,8 @@ if dein#load_state(s:plugin_dir)
   call dein#add('plasticboy/vim-markdown', {'depends' : 'godlygeek/tabular'})
   call dein#add('previm/previm')
   call dein#add('reireias/vim-cheatsheet')
+  call dein#add('simeji/winresizer')
+  call dein#add('dhruvasagar/vim-table-mode')
 
   call dein#end()
   call dein#save_state()
