@@ -1,12 +1,18 @@
 #!/bin/bash
 
 readonly PLANTUML_JAR_BASE="$HOME/dotfiles/common/plantuml/bin/plantuml.jar"
+readonly UNAME="$(uname)"
 
-if uname | grep -i ^mingw.* > /dev/null; then
+# Windows with MinGW
+if echo "${UNAME}" | grep -i ^mingw.* > /dev/null; then
 	PLANTUML_CMD="java -jar ${PLANTUML_JAR_BASE} -tpng"
-elif [[ "$(uname)" = "Linux" ]]; then
+
+# Linux
+elif [[ "${UNAME}" = "Linux" ]]; then
 	PLANTUML_CMD="plantuml -tpng"
-elif [[ "$(uname)" = "Darwin" ]]; then
+
+# macOS
+elif [[ "${UNAME}" = "Darwin" ]]; then
 	PLANTUML_CMD="java -jar ${PLANTUML_JAR_BASE} -tpng"
 fi
 
