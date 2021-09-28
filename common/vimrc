@@ -86,6 +86,9 @@ let g:plantuml_executable_script = expand('$HOME/dotfiles/common/plantuml/txt2pl
 " Cheetsheat
 let g:cheatsheet#cheat_file = '~/dotfiles/common/vim/cheatsheet.md'
 
+" sonictemplate-vim
+let g:sonictemplate_vim_template_dir = '~/dotfiles/common/vim/template'
+
 " Markdown Settings
 augroup MarkdownSettings
   autocmd!
