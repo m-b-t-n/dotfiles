@@ -46,6 +46,7 @@ if dein#load_state(s:plugin_dir)
   call dein#add('reireias/vim-cheatsheet')
   call dein#add('simeji/winresizer')
   call dein#add('dhruvasagar/vim-table-mode')
+  call dein#add('mattn/vim-sonictemplate')
 
   call dein#end()
   call dein#save_state()
@@ -84,6 +85,9 @@ let g:plantuml_executable_script = expand('$HOME/dotfiles/common/plantuml/txt2pl
 
 " Cheetsheat
 let g:cheatsheet#cheat_file = '~/dotfiles/common/vim/cheatsheet.md'
+
+" sonictemplate-vim
+let g:sonictemplate_vim_template_dir = '~/dotfiles/common/vim/template'
 
 " Markdown Settings
 augroup MarkdownSettings
