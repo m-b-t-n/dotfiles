@@ -8,6 +8,9 @@ GIT_PS1_SHOWDIRTYSTATE=1
 # GIT_PS1_SHOWUNTRACKEDFILES=1
 # GIT_PS1_SHOWSTASHSTATE=1
 
+# PATH
+export PATH="${PATH}:${HOME}/Apps/ranger-1.9.3/"
+
 # Able to create symlink when running by admin user
 export MSYS=winsymlinks:nativestruct
 
