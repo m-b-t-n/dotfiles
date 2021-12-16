@@ -5,7 +5,7 @@ readonly UNAME="$(uname)"
 
 # Windows with MinGW
 if echo "${UNAME}" | grep -i ^mingw.* > /dev/null; then
-	PLANTUML_CMD="java -jar ${PLANTUML_JAR_BASE} -tpng"
+	PLANTUML_CMD="java -jar ${PLANTUML_JAR_BASE} -tpng -charset UTF-8"
 
 # Linux
 elif [[ "${UNAME}" = "Linux" ]]; then
