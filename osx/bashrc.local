@@ -20,6 +20,8 @@ elif [ -f /usr/local/etc/bash_completion.d/git-prompt.sh ]; then
 	source /usr/local/etc/bash_completion.d/git-prompt.sh
 fi
 
+[[ -r "/opt/homebrew/etc/profile.d/bash_completion.sh" ]] && . "/opt/homebrew/etc/profile.d/bash_completion.sh"
+
 GIT_PS1_SHOWDIRTYSTATE=true
 
 # Homebrew
@@ -47,4 +49,5 @@ alias tm='tmux new-session \; source-file ~/dotfiles/common/tmux/tmux.startup'
 alias tml='tmux ls'
 alias tma='tmux attach'
 alias tmd='tmux detach'
+
 
