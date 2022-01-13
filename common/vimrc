@@ -47,6 +47,7 @@ if dein#load_state(s:plugin_dir)
   call dein#add('simeji/winresizer')
   call dein#add('dhruvasagar/vim-table-mode')
   call dein#add('mattn/vim-sonictemplate')
+  call dein#add('lambdalisue/readablefold.vim')
 
   call dein#end()
   call dein#save_state()
