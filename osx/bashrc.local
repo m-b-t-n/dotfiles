@@ -3,6 +3,7 @@ alias l='ls -G'
 alias ls='ls -G'
 alias ll='ls -laG'
 
+
 # Git Prompt
 if [ -f /usr/local/git/git-completion.bash ]; then
 	source /usr/local/git/git-completion.bash
@@ -40,10 +41,13 @@ if which pyenv > /dev/null; then
 	eval "$(pyenv init -)";
 fi
 
+# Flutter
+export PATH="/opt/homebrew/bin:~/Apps/flutter/bin:$PATH"
+export CHROME_EXECUTABLE='/Applications/Microsoft Edge.app/Contents/MacOS/Microsoft Edge'
+
 # tmux
 alias tm='tmux new-session \; source-file ~/dotfiles/common/tmux/tmux.startup'
 alias tml='tmux ls'
 alias tma='tmux attach'
 alias tmd='tmux detach'
-
 
