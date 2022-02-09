@@ -50,6 +50,7 @@ echo "${ENVIRONMENT} ###"
 
 DOTFILES=(\
 	".vimrc" \
+	".bash_profile" \
 	".bashrc" \
 	".tigrc" \
 	".gvimrc" \
