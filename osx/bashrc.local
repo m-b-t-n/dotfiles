@@ -25,11 +25,14 @@ fi
 
 GIT_PS1_SHOWDIRTYSTATE=true
 
+# Homebrew
+export PATH="/opt/homebrew/bin:$PATH"
+
 # Node.js
 export PATH="$PATH:/Users/$(whoami)/.nodebrew/current/bin"
 
 # Flutter
-export PATH="/opt/homebrew/bin:~/Apps/flutter/bin:$PATH"
+export PATH="/Users/$(whoami)/Apps/flutter/bin:$PATH"
 export CHROME_EXECUTABLE='/Applications/Microsoft Edge.app/Contents/MacOS/Microsoft Edge'
 
 # tmux
