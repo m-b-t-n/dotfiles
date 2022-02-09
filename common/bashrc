@@ -1,9 +1,7 @@
 # Global bashrc
 
-# unames;
-# Linux:   Linux
-# macOS:   Darwin
-# Windows: MINGW.*
+# Set environment vars
+source ~/dotfiles/env/environment_vars
 
 # Readline
 set -o vi
@@ -41,15 +39,5 @@ bind 'set vi-cmd-mode-string C)'
 bind 'set vi-ins-mode-string I)'
 
 # Road local bashrc & aliases
-CURRENT_HOST_OS="$(uname)"
-
-if echo "${CURRENT_HOST_OS}" | grep -i ^mingw.* >/dev/null; then
-	source ~/dotfiles/windows/bashrc.local
-
-elif [ "Linux" == "$(uname)" ]; then
-	source ~/dotfiles/ubuntu/bashrc.local
-
-elif [ "Darwin" == "$(uname)" ]; then
-	source ~/dotfiles/osx/bashrc.local
-fi
+source ~/dotfiles/${DOTFILES_ENV_OS}/bashrc.local
 
