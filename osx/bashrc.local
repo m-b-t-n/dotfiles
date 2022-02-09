@@ -25,21 +25,8 @@ fi
 
 GIT_PS1_SHOWDIRTYSTATE=true
 
-# Homebrew
-if which brew > /dev/null; then
-	brew_exec_additional="/usr/local/sbin"
-	brew_exec_pathes="PATH=${brew_exec_additional}:${PATH/\/usr\/local\/pyenv\/shims:/}"
-	alias brew="env ${brew_exec_pathes} brew"
-fi
-
 # Node.js
 export PATH="$PATH:/Users/$(whoami)/.nodebrew/current/bin"
-
-# Python(pyenv)
-export PYENV_ROOT="/usr/local/var/pyenv"
-if which pyenv > /dev/null; then
-	eval "$(pyenv init -)";
-fi
 
 # Flutter
 export PATH="/opt/homebrew/bin:~/Apps/flutter/bin:$PATH"
