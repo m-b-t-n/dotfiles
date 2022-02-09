@@ -1,4 +1,5 @@
 *.swp
 .DS_Store
 test_setup.sh.log
+env/*
 
