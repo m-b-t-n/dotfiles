@@ -1,14 +1,14 @@
 #!/bin/bash
 
-readonly UNAME="$(uname)"
+source ~/dotfiles/env/environment_vars
 
-if echo "${UNAME}" | grep -i ^mingw.* >/dev/null; then
+if [[ "${DOTFILES_ENV_OS}" == "windows" ]]; then
 	RANGER_EXEC_CMD="ranger.py"
 
-elif [[ "${UNAME}" = "Linux" ]] || [[ "${UNAME}" = "Darwin" ]]; then
+elif [[ "${DOTFILES_ENV_OS}" = "linux" ]] || [[ "${DOTFILES_ENV_OS}" = "macos" ]]; then
 	RANGER_EXEC_CMD="ranger"
 else
-	RANGER_EXEC_CMD="ranger"
+	RANGER_EXEC_CMD=""
 fi
 
 function _ranger() {
