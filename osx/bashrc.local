@@ -40,10 +40,6 @@ if which pyenv > /dev/null; then
 	eval "$(pyenv init -)";
 fi
 
-# ranger
-source ~/dotfiles/common/ranger/ranger.sh
-alias r='_ranger'
-
 # tmux
 alias tm='tmux new-session \; source-file ~/dotfiles/common/tmux/tmux.startup'
 alias tml='tmux ls'
