@@ -57,7 +57,7 @@ endif
 filetype plugin indent on
 
 " Global Settings
-colorscheme desert
+colorscheme elflord
 set title
 set number
 set tabstop=8
