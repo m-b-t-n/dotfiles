@@ -133,6 +133,15 @@ else
 	ln -sfv ~/dotfiles/common/ranger/config ~/.config/ranger
 fi
 
+# wezterm
+if [[ "${DEBUG_MODE}" == "true" ]]; then
+	echo -e "mkdir -p ~/.config"
+	echo -e "\tln -sfv ~/dotfiles/common/wezterm ~/.config/wezterm"
+else
+	mkdir -p ~/.config
+	ln -sfv ~/dotfiles/common/wezterm ~/.config/wezterm
+fi
+
 echo "### Export ENVIRONMENT vars ###"
 if [[ "${DEBUG_MODE}" == "true" ]]; then
 	echo -e "\techo \"DOTFILES_ENV_OS=${ENVIRONMENT[0]}\" >> ~/dotfiles/env/environment_vars"
