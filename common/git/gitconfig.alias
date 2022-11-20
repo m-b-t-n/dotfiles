@@ -9,6 +9,7 @@
 	cm = commit
 	tar = archive --format=tar
 	df = diff
+	dfc = diff --cached
 	dfq = diff --quiet
 	dfn = diff --name-only
 	dt = difftool
