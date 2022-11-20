@@ -9,6 +9,10 @@ return {
 	text_background_opacity = 0.7,
 	tab_max_width = 48,
 	use_fancy_tab_bar = false,
+	inactive_pane_hsb = {
+		saturation = 1.0,
+		brightness = 0.3,
+	},
 	leader = keybinds.leader,
 	keys = keybinds.binds,
 }
