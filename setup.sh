@@ -127,7 +127,7 @@ for ((i=0; i<${#DOTFILES[@]}; ++i)); {
 
 # ranger
 if [[ "${DEBUG_MODE}" == "true" ]]; then
-	echo -e "mkdir -p ~/.config"
+	echo -e "\tmkdir -p ~/.config"
 	echo -e "\tln -sfv ~/dotfiles/common/ranger/config ~/.config/ranger"
 else
 	mkdir -p ~/.config
@@ -136,7 +136,7 @@ fi
 
 # wezterm
 if [[ "${DEBUG_MODE}" == "true" ]]; then
-	echo -e "mkdir -p ~/.config"
+	echo -e "\tmkdir -p ~/.config"
 	echo -e "\tln -sfv ~/dotfiles/common/wezterm ~/.config/wezterm"
 else
 	mkdir -p ~/.config
