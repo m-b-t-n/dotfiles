@@ -125,7 +125,8 @@ for ((i=0; i<${#DOTFILES[@]}; ++i)); {
 	fi
 }
 
-if [[ "${DEBUG_MODE}" == true ]]; then
+# ranger
+if [[ "${DEBUG_MODE}" == "true" ]]; then
 	echo -e "mkdir -p ~/.config"
 	echo -e "\tln -sfv ~/dotfiles/common/ranger/config ~/.config/ranger"
 else
