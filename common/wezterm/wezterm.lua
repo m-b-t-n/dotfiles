@@ -13,6 +13,9 @@ return {
 		saturation = 1.0,
 		brightness = 0.3,
 	},
+	-- Default is;
+	-- window_decorations = "TITLE | RESIZE",
+	window_decorations = "RESIZE",
 	leader = keybinds.leader,
 	keys = keybinds.binds,
 }
