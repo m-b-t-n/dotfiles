@@ -1,4 +1,5 @@
 local wezterm = require 'wezterm'
+local keybinds = require 'keys'
 
 return {
 	font = wezterm.font("Ricty Diminished Discord", {weight="Regular", stretch="Normal", style="Normal"}),
@@ -6,5 +7,7 @@ return {
 	color_scheme = "Pastel White (terminal.sexy)",
 	window_background_opacity = 0.7,
 	text_background_opacity = 0.7,
+	leader = keybinds.leader,
+	keys = keybinds.binds,
 }
 
