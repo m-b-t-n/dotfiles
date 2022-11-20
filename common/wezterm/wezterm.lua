@@ -20,6 +20,8 @@ return {
 	cursor_blink_ease_in = "Constant",
 	cursor_blink_ease_out = "Constant",
 	cursor_blink_rate = 600,
+	initial_cols = 160,
+	initial_rows = 48,
 	leader = keybinds.leader,
 	keys = keybinds.binds,
 }
