@@ -1,5 +1,13 @@
 #!/bin/bash
 
+# Set environment vars
+source ~/dotfiles/env/environment_vars
+
+# Load `bash_profile.local` for each platforms
+if [[ -f ~/dotfiles/${DOTFILES_ENV_OS}/bash_profile.local ]]; then
+	source ~/dotfiles/${DOTFILES_ENV_OS}/bash_profile.local
+fi
+
 if [[ -f ~/.bashrc ]]; then
 	source ~/.bashrc
 fi

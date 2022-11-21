@@ -1,0 +1,10 @@
+# Homebrew
+export PATH="/opt/homebrew/bin:$PATH"
+
+# Node.js
+export PATH="$PATH:/Users/$(whoami)/.nodebrew/current/bin"
+
+# Flutter
+export PATH="/Users/$(whoami)/Apps/flutter/bin:/Users/$(whoami)/Apps/flutter/.pub-cache/bin:$PATH"
+export CHROME_EXECUTABLE='/Applications/Microsoft Edge.app/Contents/MacOS/Microsoft Edge'
+
