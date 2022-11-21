@@ -1,0 +1,6 @@
+# PATH
+export PATH="${PATH}:${HOME}/Apps/ranger-1.9.3/"
+
+# Able to create symlink when running by admin user
+export MSYS=winsymlinks:nativestruct
+
