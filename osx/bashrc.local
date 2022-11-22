@@ -31,3 +31,7 @@ alias tml='tmux ls'
 alias tma='tmux attach'
 alias tmd='tmux detach'
 
+# flutter
+alias flutter='fvm flutter'
+alias dart='fvm dart'
+
