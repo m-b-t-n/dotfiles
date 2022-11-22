@@ -1,0 +1,58 @@
+# Load always when launching vim
+
+[[plugins]]
+repo = 'Shougo/dein.vim'
+depends = ['wsdjeg/dein-ui.vim']
+
+[[plugins]]
+repo = 'wsdjeg/dein-ui.vim'
+
+[[plugins]]
+repo = 'scrooloose/nerdtree'
+
+[[plugins]]
+repo = 'neoclide/coc.nvim'
+rev = 'release'
+merged = '0'
+
+[[plugins]]
+repo = 'aklt/plantuml-syntax'
+
+[[plugins]]
+repo = 'vim-airline/vim-airline'
+depends = ['vim-airline-themes']
+
+[[plugins]]
+repo = 'vim-airline/vim-airline-themes'
+
+[[plugins]]
+repo = 'tyru/open-browser.vim'
+
+[[plugins]]
+repo = 'godlygeek/tabular'
+depends = ['plasticboy/vim-markdown']
+
+[[plugins]]
+repo = 'plasticboy/vim-markdown'
+
+[[plugins]]
+repo = 'previm/previm'
+
+[[plugins]]
+repo = 'reireias/vim-cheatsheet'
+
+[[plugins]]
+repo = 'simeji/winresizer'
+
+[[plugins]]
+repo = 'dhruvasagar/vim-table-mode'
+
+[[plugins]]
+repo = 'mattn/vim-sonictemplate'
+
+[[plugins]]
+repo = 'lambdalisue/readablefold.vim'
+
+[[plugins]]
+repo = 'dart-lang/dart-vim-plugin'
+

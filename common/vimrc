@@ -33,22 +33,11 @@ endif
 if dein#load_state(s:plugin_dir)
   call dein#begin(s:plugin_dir)
 
-  call dein#add('scrooloose/nerdtree')
-  call dein#add('neoclide/coc.nvim', {'merged':0, 'rev': 'release'})
-  call dein#add('wsdjeg/dein-ui.vim', {'depends' : 'Shougo/dein.vim'})
-  call dein#add('aklt/plantuml-syntax')
-  call dein#add('vim-airline/vim-airline')
-  call dein#add('vim-airline/vim-airline-themes', {'depends' : 'vim-airline/vim-airline'})
-  call dein#add('tyru/open-browser.vim')
-  call dein#add('godlygeek/tabular')
-  call dein#add('plasticboy/vim-markdown', {'depends' : 'godlygeek/tabular'})
-  call dein#add('previm/previm')
-  call dein#add('reireias/vim-cheatsheet')
-  call dein#add('simeji/winresizer')
-  call dein#add('dhruvasagar/vim-table-mode')
-  call dein#add('mattn/vim-sonictemplate')
-  call dein#add('lambdalisue/readablefold.vim')
-  call dein#add('dart-lang/dart-vim-plugin')
+  let g:dein_toml_dir = expand('~/dotfiles/common/vim/dein')
+  let s:toml = g:dein_toml_dir . '/dein.toml'
+  "let s:lazy_toml = g:dein_toml_dir . '/dein_lazy.toml'
+  call dein#load_toml(s:toml, {'lazy': 0})
+  "call dein#load_toml(s:lazy_toml, {'lazy': 1})
 
   call dein#end()
   call dein#save_state()
