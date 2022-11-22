@@ -4,6 +4,9 @@ export PATH="/opt/homebrew/bin:$PATH"
 # Node.js
 export PATH="$PATH:/Users/$(whoami)/.nodebrew/current/bin"
 
+# Ruby
+export PATH="/usr/local/opt/ruby/bin:$PATH"
+
 # Flutter
 export FVM_HOME="$HOME/.fvm"
 export PATH="$PATH:$HOME/.pub-cache/bin:$FVM_HOME/default/bin"
