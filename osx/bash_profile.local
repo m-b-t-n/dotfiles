@@ -4,7 +4,11 @@ export PATH="/opt/homebrew/bin:$PATH"
 # Node.js
 export PATH="$PATH:/Users/$(whoami)/.nodebrew/current/bin"
 
+# Ruby
+export PATH="/usr/local/opt/ruby/bin:$PATH"
+
 # Flutter
-export PATH="/Users/$(whoami)/Apps/flutter/bin:/Users/$(whoami)/Apps/flutter/.pub-cache/bin:$PATH"
+export FVM_HOME="$HOME/.fvm"
+export PATH="$PATH:$HOME/.pub-cache/bin:$FVM_HOME/default/bin"
 export CHROME_EXECUTABLE='/Applications/Microsoft Edge.app/Contents/MacOS/Microsoft Edge'
 
