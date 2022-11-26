@@ -8,7 +8,7 @@ function (tab)
 	if tab.is_active then
 		local tab_text =
 			' '
-			.. tostring(tab.tab_id + 1)
+			.. tostring(tab.tab_index + 1)
 			.. ': '
 			.. tab.active_pane.title
 			.. ' '
