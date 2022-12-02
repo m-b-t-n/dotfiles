@@ -1,2 +1,11 @@
 # Lazy loading
 
+# https://github.com/dart-lang/dart-vim-plugin
+[[plugins]]
+repo = 'dart-lang/dart-vim-plugin'
+on_ft = ['dart']
+hook_add = '''
+  " enable Dart style guide syntax (like 2-space indentation)
+  let g:dart_style_guide = 2
+'''
+

@@ -53,6 +53,3 @@ repo = 'mattn/vim-sonictemplate'
 [[plugins]]
 repo = 'lambdalisue/readablefold.vim'
 
-[[plugins]]
-repo = 'dart-lang/dart-vim-plugin'
-
