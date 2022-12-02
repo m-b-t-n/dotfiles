@@ -2,17 +2,6 @@
 " vim:set ts=8 sts=2 sw=2 tw=0:
 set nocompatible
 
-" Set for Windows environment
-if has('win32') || has('win64')
-  "let $HOME='system('echo "C:/Users/$(whoami)"')'
-  let g:coc_node_path="C:/Program\ Files/nodejs/node.exe"
-endif
-
-" Set for macOS environment
-if has('mac')
-  let g:coc_node_path="~/.nodebrew/current/bin/node"
-endif
-
 " Plugins dir
 let s:plugin_dir = expand('~/.vim/bundle/')
 " Add runtimepath the dir to install dein.vim
@@ -35,15 +24,20 @@ if dein#load_state(s:plugin_dir)
 
   let g:dein_toml_dir = expand('~/dotfiles/common/vim/dein')
   let s:toml = g:dein_toml_dir . '/dein.toml'
-  "let s:lazy_toml = g:dein_toml_dir . '/dein_lazy.toml'
+  let s:lazy_toml = g:dein_toml_dir . '/dein_lazy.toml'
   call dein#load_toml(s:toml, {'lazy': 0})
-  "call dein#load_toml(s:lazy_toml, {'lazy': 1})
+  call dein#load_toml(s:lazy_toml, {'lazy': 1})
 
   call dein#end()
   call dein#save_state()
 endif
 
 filetype plugin indent on
+
+augroup ExtendedFileTypeDetect
+  autocmd!
+  autocmd BufNewFile,BufRead *.uml,*.puml,*.plantuml,*.pu setfiletype plantuml
+augroup END
 
 " Global Settings
 colorscheme desert
@@ -70,37 +64,4 @@ set noundofile
 set nobackup
 set cmdheight=2
 set fileencodings=utf-8,sjis,cp932,euc-jp
-
-" PlantUML Settings
-let g:plantuml_executable_script = expand('$HOME/dotfiles/common/plantuml/txt2plantuml.sh')
-
-" Cheetsheat
-let g:cheatsheet#cheat_file = '~/dotfiles/common/vim/cheatsheet.md'
-
-" sonictemplate-vim
-let g:sonictemplate_vim_template_dir = '~/dotfiles/common/vim/template'
-
-" Markdown Settings
-augroup MarkdownSettings
-  autocmd!
-  autocmd BufNewFile,BufRead *.{md,mkd} set filetype=markdown
-  nnoremap <silent> <C-p> :PrevimOpen<CR>
-  let g:vim_markdown_folding_disabled = 1
-  let g:previm_enable_realtime = 1
-  if has('win32') || ('win64')
-    let g:previm_open_cmd = 'C:\\Program\ Files\ (x86)\\Mozilla\ Firefox\\firefox.exe'
-  elseif has('mac')
-    let g:previm_open_cmd = 'open -a Firefox.app'
-  else
-    let g:previm_open_cmd = ''
-  endif
-augroup END
-
-" NERDTree Settings
-let NERDTreeShowHidden = 1
-let NERDTreeIgnore = [
-      \ 'NTUSER.*$',
-      \ '.[oa]$'
-      \]
-autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | execute 'NERDTree' | endif
 
