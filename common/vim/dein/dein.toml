@@ -7,8 +7,17 @@ depends = ['wsdjeg/dein-ui.vim']
 [[plugins]]
 repo = 'wsdjeg/dein-ui.vim'
 
+# https://github.com/preservim/nerdtree
 [[plugins]]
 repo = 'scrooloose/nerdtree'
+hook_add = '''
+  let NERDTreeShowHidden = 1
+  let NERDTreeIgnore = [
+        \ 'NTUSER.*$',
+        \ '.[oa]$'
+        \]
+  autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | execute 'NERDTree' | endif
+'''
 
 [[plugins]]
 repo = 'neoclide/coc.nvim'

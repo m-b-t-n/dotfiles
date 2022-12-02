@@ -90,11 +90,3 @@ augroup MarkdownSettings
   endif
 augroup END
 
-" NERDTree Settings
-let NERDTreeShowHidden = 1
-let NERDTreeIgnore = [
-      \ 'NTUSER.*$',
-      \ '.[oa]$'
-      \]
-autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | execute 'NERDTree' | endif
-
