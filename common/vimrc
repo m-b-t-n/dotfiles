@@ -74,9 +74,6 @@ set fileencodings=utf-8,sjis,cp932,euc-jp
 " PlantUML Settings
 let g:plantuml_executable_script = expand('$HOME/dotfiles/common/plantuml/txt2plantuml.sh')
 
-" sonictemplate-vim
-let g:sonictemplate_vim_template_dir = '~/dotfiles/common/vim/template'
-
 " Markdown Settings
 augroup MarkdownSettings
   autocmd!

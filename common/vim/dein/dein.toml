@@ -51,8 +51,12 @@ repo = 'simeji/winresizer'
 [[plugins]]
 repo = 'dhruvasagar/vim-table-mode'
 
+# https://github.com/mattn/vim-sonictemplate
 [[plugins]]
 repo = 'mattn/vim-sonictemplate'
+hook_add = '''
+  let g:sonictemplate_vim_template_dir = '~/dotfiles/common/vim/template'
+'''
 
 [[plugins]]
 repo = 'lambdalisue/readablefold.vim'
