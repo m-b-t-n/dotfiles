@@ -45,6 +45,11 @@ endif
 
 filetype plugin indent on
 
+augroup ExtendedFileTypeDetect
+  autocmd!
+  autocmd BufNewFile,BufRead *.uml,*.puml,*.plantuml,*.pu setfiletype plantuml
+augroup END
+
 " Global Settings
 colorscheme desert
 set title
