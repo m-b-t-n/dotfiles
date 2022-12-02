@@ -38,8 +38,12 @@ repo = 'plasticboy/vim-markdown'
 [[plugins]]
 repo = 'previm/previm'
 
+# https://github.com/reireias/vim-cheatsheet
 [[plugins]]
 repo = 'reireias/vim-cheatsheet'
+hook_add = '''
+  let g:cheatsheet#cheat_file = '~/dotfiles/common/vim/cheatsheet.md'
+'''
 
 [[plugins]]
 repo = 'simeji/winresizer'
