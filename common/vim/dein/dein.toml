@@ -19,10 +19,18 @@ hook_add = '''
   autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | execute 'NERDTree' | endif
 '''
 
+# https://github.com/neoclide/coc.nvim
 [[plugins]]
 repo = 'neoclide/coc.nvim'
 rev = 'release'
 merged = '0'
+hook_add = '''
+  if has('win32') || has('win64')
+    let g:coc_node_path="C:/Program\ Files/nodejs/node.exe"
+  elseif has('mac')
+    let g:coc_node_path="~/.nodebrew/current/bin/node"
+  endif
+'''
 
 [[plugins]]
 repo = 'vim-airline/vim-airline'

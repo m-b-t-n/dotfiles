@@ -2,17 +2,6 @@
 " vim:set ts=8 sts=2 sw=2 tw=0:
 set nocompatible
 
-" Set for Windows environment
-if has('win32') || has('win64')
-  "let $HOME='system('echo "C:/Users/$(whoami)"')'
-  let g:coc_node_path="C:/Program\ Files/nodejs/node.exe"
-endif
-
-" Set for macOS environment
-if has('mac')
-  let g:coc_node_path="~/.nodebrew/current/bin/node"
-endif
-
 " Plugins dir
 let s:plugin_dir = expand('~/.vim/bundle/')
 " Add runtimepath the dir to install dein.vim
