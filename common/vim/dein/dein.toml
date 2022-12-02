@@ -25,9 +25,6 @@ rev = 'release'
 merged = '0'
 
 [[plugins]]
-repo = 'aklt/plantuml-syntax'
-
-[[plugins]]
 repo = 'vim-airline/vim-airline'
 depends = ['vim-airline-themes']
 

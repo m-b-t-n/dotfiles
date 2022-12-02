@@ -9,3 +9,11 @@ hook_add = '''
   let g:dart_style_guide = 2
 '''
 
+# https://github.com/aklt/plantuml-syntax
+[[plugins]]
+repo = 'aklt/plantuml-syntax'
+on_ft = ['plantuml']
+hook_add = '''
+  let g:plantuml_executable_script = expand('$HOME/dotfiles/common/plantuml/txt2plantuml.sh')
+'''
+
