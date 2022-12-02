@@ -34,15 +34,20 @@ repo = 'vim-airline/vim-airline-themes'
 [[plugins]]
 repo = 'tyru/open-browser.vim'
 
-[[plugins]]
-repo = 'godlygeek/tabular'
-depends = ['plasticboy/vim-markdown']
-
-[[plugins]]
-repo = 'plasticboy/vim-markdown'
-
+# https://github.com/previm/previm/
 [[plugins]]
 repo = 'previm/previm'
+hook_add = '''
+  let g:previm_enable_realtime = 1
+  if has('win32') || ('win64')
+    let g:previm_open_cmd = 'C:\\Program\ Files\ (x86)\\Mozilla\ Firefox\\firefox.exe'
+  elseif has('mac')
+    let g:previm_open_cmd = 'open -a Firefox.app'
+  else
+    let g:previm_open_cmd = ''
+  endif
+  nnoremap <silent> <C-p> :PrevimOpen<CR>
+'''
 
 # https://github.com/reireias/vim-cheatsheet
 [[plugins]]
