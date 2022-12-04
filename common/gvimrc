@@ -10,7 +10,7 @@ if has('win32') || has('win64')
 endif
 
 if has('mac') || has('gui_macvim')
-  set guifont=Ricty\ Diminished\ Discord\ Regular:h14
+  set guifont=Ricty\ Diminished\ Discord\ Regular:h20
 endif
 
 " Hidden menu-bar && tool-bar
@@ -26,8 +26,13 @@ set guioptions-=L
 " Hidden horizontal scroll-bar
 set guioptions-=b
 
-" View settings
-if has('win32') || has('win64')
-  autocmd GUIEnter * set transparency=230
-endif
+" Transparency
+augroup SetTransparency
+  autocmd!
+  if has('win32') || has('win64')
+    autocmd GUIEnter * set transparency=23
+  elseif has('mac') || has('gui_macvim')
+    autocmd GUIEnter * set transparency=12
+  endif
+augroup END
 

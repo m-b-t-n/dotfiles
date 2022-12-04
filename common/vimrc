@@ -11,12 +11,12 @@ execute 'set runtimepath+=' . s:dein_dir
 " If not installed dein.vim, install when vim is opened
 augroup PluginInstall
   autocmd!
-    autocmd VimEnter * if dein#check_install() | call dein#install() | endif
+  autocmd VimEnter * if dein#check_install() | call dein#install() | endif
 augroup END
 
 if !isdirectory(s:dein_dir)
-      call mkdir(s:dein_dir, 'p')
-        silent execute printf('!git clone %s %s', 'https://github.com/Shougo/dein.vim', s:dein_dir)
+  call mkdir(s:dein_dir, 'p')
+  silent execute printf('!git clone %s %s', 'https://github.com/Shougo/dein.vim', s:dein_dir)
 endif
 
 if dein#load_state(s:plugin_dir)
@@ -64,4 +64,5 @@ set noundofile
 set nobackup
 set cmdheight=2
 set fileencodings=utf-8,sjis,cp932,euc-jp
+set wildmenu
 
