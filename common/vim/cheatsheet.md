@@ -3,6 +3,7 @@
 ## All of lists
 
 | cmd               | description                                  |
+|-------------------|----------------------------------------------|
 | tabnew            | タブを新規に開く                             |
 | gt                | 次のタブに移動する                           |
 | gT                | 前のタブに移動する                           |
@@ -20,4 +21,5 @@
 | :make             | PlantUML 図を生成する                        |
 | :TableModeEnable  | テーブルモードに入る                         |
 | :TableModeDisable | テーブルモードを抜ける                       |
+| :help @en         | 英語版のヘルプを表示する                     |
 

@@ -7,6 +7,13 @@ depends = ['wsdjeg/dein-ui.vim']
 [[plugins]]
 repo = 'wsdjeg/dein-ui.vim'
 
+# https://github.com/vim-jp/vimdoc-ja
+[[plugins]]
+repo = 'vim-jp/vimdoc-ja'
+hook_add = '''
+  set helplang=ja,en
+'''
+
 # https://github.com/preservim/nerdtree
 [[plugins]]
 repo = 'scrooloose/nerdtree'
