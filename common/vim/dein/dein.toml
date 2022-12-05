@@ -77,3 +77,12 @@ hook_add = '''
 [[plugins]]
 repo = 'lambdalisue/readablefold.vim'
 
+# https://github.com/Shougo/context_filetype.vim
+[[plugins]]
+repo = 'Shougo/context_filetype.vim'
+
+# https://github.com/osyo-manga/vim-precious
+[[plugins]]
+repo = 'osyo-manga/vim-precious'
+depends = ['Shougo/context_filetype.vim']
+
