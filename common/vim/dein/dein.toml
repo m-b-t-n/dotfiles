@@ -33,7 +33,7 @@ hook_add = '''
 [[plugins]]
 repo = 'neoclide/coc.nvim'
 rev = 'release'
-merged = '0'
+merged = 0
 hook_add = '''
   if has('win32') || has('win64')
     let g:coc_node_path="C:/Program\ Files/nodejs/node.exe"
