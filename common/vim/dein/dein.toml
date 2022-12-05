@@ -42,12 +42,14 @@ hook_add = '''
   endif
 '''
 
+# https://github.com/itchyny/lightline.vim
 [[plugins]]
-repo = 'vim-airline/vim-airline'
-depends = ['vim-airline-themes']
-
-[[plugins]]
-repo = 'vim-airline/vim-airline-themes'
+repo = 'itchyny/lightline.vim'
+hook_add = '''
+  let g:lightline = {
+  \ 'colorscheme': 'ayu_dark',
+  \ }
+'''
 
 [[plugins]]
 repo = 'tyru/open-browser.vim'
