@@ -23,7 +23,10 @@ hook_add = '''
         \ 'NTUSER.*$',
         \ '.[oa]$'
         \]
-  autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | execute 'NERDTree' | endif
+  augroup AutoEnterOnlyGUI
+    autocmd!
+    autocmd GUIEnter * if argc() == 0 && !exists("s:std_in") | execute 'NERDTree' | endif
+  augroup END
 '''
 
 # https://github.com/neoclide/coc.nvim
