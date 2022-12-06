@@ -46,8 +46,41 @@ hook_add = '''
 [[plugins]]
 repo = 'itchyny/lightline.vim'
 hook_add = '''
+  function! CocCurrentFunction()
+    return get(b:, 'coc_current_function', '')
+  endfunction
+
   let g:lightline = {
   \ 'colorscheme': 'ayu_dark',
+  \ 'active': {
+  \   'left': [
+  \     [ 'mode', 'paste' ],
+  \     [ 'cocstatus', 'currentfunction', 'readonly', 'filename', 'modified' ],
+  \   ],
+  \   'right': [
+  \     [ 'lineinfo' ],
+  \     [ 'percent' ],
+  \     [ 'fileformat', 'fileencoding', 'filetype' ]
+  \   ],
+  \   'component_function': {
+  \     'cocstatus': 'coc#status()',
+  \     'currentfunction': 'CocCurrentFunction'
+  \   }},
+  \ 'inactive': {
+  \   'left': [
+  \     [ 'filename' ]
+  \   ],
+  \   'right': [
+  \     [ 'lineinfo' ],
+  \     [ 'percent' ]
+  \   ]},
+  \ 'tabline': {
+  \   'left': [
+  \     [ 'tabs' ]
+  \   ],
+  \   'right': [
+  \     [ 'close' ]
+  \   ]}
   \ }
 '''
 
