@@ -18,6 +18,8 @@
 | l                 | 現在のペインを右に拡大する                   |
 | :buffers          | バッファの一覧を表示する                     |
 | :ls               | 同上                                         |
+| :vsp #{buf_num}   | {buf_num} 番目のバッファを垂直分割で開く     |
+| :sp #{buf_num}    | {buf_num} 番目のバッファを水平分割で開く     |
 | :make             | PlantUML 図を生成する                        |
 | :TableModeEnable  | テーブルモードに入る                         |
 | :TableModeDisable | テーブルモードを抜ける                       |
