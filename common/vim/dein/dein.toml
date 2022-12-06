@@ -23,28 +23,89 @@ hook_add = '''
         \ 'NTUSER.*$',
         \ '.[oa]$'
         \]
-  autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | execute 'NERDTree' | endif
+  augroup AutoEnterOnlyGUI
+    autocmd!
+    autocmd GUIEnter * if argc() == 0 && !exists("s:std_in") | execute 'NERDTree' | endif
+  augroup END
 '''
 
 # https://github.com/neoclide/coc.nvim
 [[plugins]]
 repo = 'neoclide/coc.nvim'
 rev = 'release'
-merged = '0'
+merged = 0
 hook_add = '''
   if has('win32') || has('win64')
     let g:coc_node_path="C:/Program\ Files/nodejs/node.exe"
   elseif has('mac')
     let g:coc_node_path="~/.nodebrew/current/bin/node"
   endif
+
+  nmap <silent> gd <Plug>(coc-definition)
+  nmap <silent> gy <Plug>(coc-type-definition)
+  nmap <silent> gi <Plug>(coc-implementation)
+  nmap <silent> gr <Plug>(coc-references)
+  nmap <F2> <Plug>(coc-rename)
+
+  function! s:show_documentation()
+    if &filetype == 'vim'
+      execute 'h ' . expand('<cword>')
+    elseif CocAction('hasProvider', 'hover')
+      call CocActionAsync('doHover')
+    else
+      call feedkeys('K', 'in')
+    endif
+  endfunction
+  nnoremap <silent> K :call <SID>show_documentation()<CR>
+
+  augroup HighlightCursorHoldedSymbol
+    autocmd!
+    autocmd CursorHold * silent call CocActionAsync('highlight')
+  augroup END
+
 '''
 
+# https://github.com/itchyny/lightline.vim
 [[plugins]]
-repo = 'vim-airline/vim-airline'
-depends = ['vim-airline-themes']
+repo = 'itchyny/lightline.vim'
+hook_add = '''
+  function! CocCurrentFunction()
+    return get(b:, 'coc_current_function', '')
+  endfunction
 
-[[plugins]]
-repo = 'vim-airline/vim-airline-themes'
+  let g:lightline = {
+  \ 'colorscheme': 'ayu_dark',
+  \ 'active': {
+  \   'left': [
+  \     [ 'mode', 'paste' ],
+  \     [ 'cocstatus', 'currentfunction', 'readonly', 'filename', 'modified' ],
+  \   ],
+  \   'right': [
+  \     [ 'lineinfo' ],
+  \     [ 'percent' ],
+  \     [ 'fileformat', 'fileencoding', 'filetype' ]
+  \   ],
+  \   'component_function': {
+  \     'cocstatus': 'coc#status()',
+  \     'currentfunction': 'CocCurrentFunction'
+  \   }},
+  \ 'inactive': {
+  \   'left': [
+  \     [ 'filename' ]
+  \   ],
+  \   'right': [
+  \     [ 'lineinfo' ],
+  \     [ 'percent' ]
+  \   ]},
+  \ 'tabline': {
+  \   'left': [
+  \     [ 'tabs' ]
+  \   ],
+  \   'right': [
+  \     [ 'close' ]
+  \   ]}
+  \ }
+'''
 
 [[plugins]]
 repo = 'tyru/open-browser.vim'
@@ -71,4 +132,13 @@ hook_add = '''
 
 [[plugins]]
 repo = 'lambdalisue/readablefold.vim'
+
+# https://github.com/Shougo/context_filetype.vim
+[[plugins]]
+repo = 'Shougo/context_filetype.vim'
+
+# https://github.com/osyo-manga/vim-precious
+[[plugins]]
+repo = 'osyo-manga/vim-precious'
+depends = ['Shougo/context_filetype.vim']
 

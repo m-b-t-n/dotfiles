@@ -1,6 +1,8 @@
 " My vimrc
 " vim:set ts=8 sts=2 sw=2 tw=0:
-set nocompatible
+if &compatible
+  set nocompatible
+endif
 
 " Plugins dir
 let s:plugin_dir = expand('~/.vim/bundle/')
@@ -65,4 +67,5 @@ set nobackup
 set cmdheight=2
 set fileencodings=utf-8,sjis,cp932,euc-jp
 set wildmenu
+set signcolumn=yes
 
