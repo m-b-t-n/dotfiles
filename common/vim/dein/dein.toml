@@ -40,6 +40,29 @@ hook_add = '''
   elseif has('mac')
     let g:coc_node_path="~/.nodebrew/current/bin/node"
   endif
+
+  nmap <silent> gd <Plug>(coc-definition)
+  nmap <silent> gy <Plug>(coc-type-definition)
+  nmap <silent> gi <Plug>(coc-implementation)
+  nmap <silent> gr <Plug>(coc-references)
+  nmap <F2> <Plug>(coc-rename)
+
+  function! s:show_documentation()
+    if &filetype == 'vim'
+      execute 'h ' . expand('<cword>')
+    elseif CocAction('hasProvider', 'hover')
+      call CocActionAsync('doHover')
+    else
+      call feedkeys('K', 'in')
+    endif
+  endfunction
+  nnoremap <silent> K :call <SID>show_documentation()<CR>
+
+  augroup HighlightCursorHoldedSymbol
+    autocmd!
+    autocmd CursorHold * silent call CocActionAsync('highlight')
+  augroup END
+
 '''
 
 # https://github.com/itchyny/lightline.vim
