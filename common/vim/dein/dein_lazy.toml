@@ -33,3 +33,8 @@ hook_add = '''
   nnoremap <silent> <C-p> :PrevimOpen<CR>
 '''
 
+# https://github.com/rust-lang/rust.vim
+[[plugins]]
+repo = 'rust-lang/rust.vim'
+on_ft = ['rust']
+
