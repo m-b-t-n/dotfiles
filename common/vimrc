@@ -68,4 +68,5 @@ set cmdheight=2
 set fileencodings=utf-8,sjis,cp932,euc-jp
 set wildmenu
 set signcolumn=yes
+set ambiwidth=double
 
