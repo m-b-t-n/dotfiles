@@ -12,3 +12,6 @@ export FVM_HOME="$HOME/.fvm"
 export PATH="$PATH:$HOME/.pub-cache/bin:$FVM_HOME/default/bin"
 export CHROME_EXECUTABLE='/Applications/Microsoft Edge.app/Contents/MacOS/Microsoft Edge'
 
+# Rust w/ rustup
+source ~/.cargo/env
+
