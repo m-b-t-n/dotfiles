@@ -40,7 +40,7 @@ bind 'set vi-cmd-mode-string C)'
 bind 'set vi-ins-mode-string I)'
 
 # Road local bashrc & aliases
-source ~/dotfiles/bash/${DOTFILES_ENV_OS}/bashrc.local
+source ~/dotfiles/bash/${DOTFILES_ENV_OS}/bashrc
 
 #
 # Installation:
