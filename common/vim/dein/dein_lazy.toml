@@ -14,7 +14,7 @@ hook_add = '''
 repo = 'aklt/plantuml-syntax'
 on_ft = ['plantuml']
 hook_add = '''
-  let g:plantuml_executable_script = expand('$HOME/dotfiles/common/plantuml/txt2plantuml.sh')
+  let g:plantuml_executable_script = expand('$HOME/dotfiles/plantuml/txt2plantuml.sh')
 '''
 
 # https://github.com/previm/previm/

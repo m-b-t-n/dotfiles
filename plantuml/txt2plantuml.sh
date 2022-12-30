@@ -1,6 +1,6 @@
 #!/bin/bash
 
-readonly PLANTUML_JAR_BASE="$HOME/dotfiles/common/plantuml/bin/plantuml.jar"
+readonly PLANTUML_JAR_BASE="$HOME/dotfiles/plantuml/bin/plantuml.jar"
 readonly UNAME="$(uname)"
 
 # Windows with MinGW
