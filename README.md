@@ -64,3 +64,45 @@ $ bash dotfiles/test_setup.sh
 
 You can check the result by seeing `dotfiles/test_setup.sh.log`.
 
+## Structures
+
+```sh
+├── README.md
+├── bash
+│   ├── bash_profile     # -> `~/.bash_profile`
+│   ├── bashrc           # -> `~/.bashrc`
+│   ├── linux
+│   ├── macos
+│   └── windows
+├── env
+│   └── environment_vars
+├── git
+│   ├── gitconfig        # -> `~/.gitconfig`
+│   └── gitconfig.alias
+├── plantuml
+│   ├── bin
+│   └── txt2plantuml.sh
+├── ranger
+│   ├── config           # -> `~/.config/ranger`
+│   └── ranger.sh
+├── setup.sh
+├── test_setup.sh
+├── tig
+│   └── tigrc            # -> `~/.tigrc`
+├── tmux
+│   ├── linux
+│   ├── macos
+│   ├── tmux.conf
+│   └── tmux.startup
+├── vim
+│   ├── cheatsheet.md
+│   ├── coc
+│   ├── dein
+│   ├── gvimrc           # -> `~/.gvimrc`
+│   ├── template
+│   └── vimrc            # -> `~/.vimrc`
+└── wezterm               # -> `~/.config/wezterm`
+    ├── keys.lua
+    └── wezterm.lua
+```
+
