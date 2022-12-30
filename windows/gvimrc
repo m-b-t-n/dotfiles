@@ -1,6 +1,0 @@
-colorscheme desert
-
-" Set GUI font
-" https://qiita.com/kroton/items/fec944389d11c1e16fe4
-set guifont=Ricty_Diminished_Discord:h12:cSHIFTJIS:qDRAFT
-
