@@ -156,10 +156,10 @@ fi
 # wezterm
 if [[ "${DEBUG_MODE}" == "true" ]]; then
 	echo -e "\tmkdir -p ~/.config"
-	echo -e "\tln -sfv ~/dotfiles/common/wezterm ~/.config/wezterm"
+	echo -e "\tln -sfv ~/dotfiles/wezterm ~/.config/wezterm"
 else
 	mkdir -p ~/.config
-	ln -sfv ~/dotfiles/common/wezterm ~/.config/wezterm
+	ln -sfv ~/dotfiles/wezterm ~/.config/wezterm
 fi
 
 echo "### Export ENVIRONMENT vars ###"
