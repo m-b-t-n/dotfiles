@@ -14,18 +14,13 @@ hook_add = '''
   set helplang=ja,en
 '''
 
-# https://github.com/preservim/nerdtree
+# https://github.com/lambdalisue/fern.vim
 [[plugins]]
-repo = 'scrooloose/nerdtree'
+repo = 'lambdalisue/fern.vim'
 hook_add = '''
-  let NERDTreeShowHidden = 1
-  let NERDTreeIgnore = [
-        \ 'NTUSER.*$',
-        \ '.[oa]$'
-        \]
-  augroup AutoEnterOnlyGUI
+  augroup AutoRunOnlyGUI
     autocmd!
-    autocmd GUIEnter * if argc() == 0 && !exists("s:std_in") | execute 'NERDTree' | endif
+    autocmd GUIEnter * ++nested Fern ~/ -drawer -reveal=%
   augroup END
 '''
 
