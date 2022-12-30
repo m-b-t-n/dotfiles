@@ -103,7 +103,6 @@ DOTFILES=(\
 	".bash_profile" \
 	".bashrc" \
 	".gvimrc" \
-	".gitconfig" \
 )
 
 if [[ ${ENVIRONMENT[0]} == "linux" ]] || [[ ${ENVIRONMENT[0]} == "macos" ]]; then
@@ -123,6 +122,13 @@ for ((i=0; i<${#DOTFILES[@]}; ++i)); {
 		ln -sfv dotfiles/common/${DOTFILES[${i}]#.} ~/${DOTFILES[${i}]}
 	fi
 }
+
+# gitconfig
+if [[ "${DEBUG_MODE}" == "true" ]]; then
+	echo -e "\tln -sfv dotfiles/git/gitconfig ~/.gitconfig"
+else
+	ln -sfv dotfiles/git/gitconfig ~/.gitconfig
+fi
 
 # tig
 if [[ "${DEBUG_MODE}" == "true" ]]; then

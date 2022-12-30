@@ -1,5 +1,5 @@
 [Include]
-	path = ~/dotfiles/common/git/gitconfig.alias
+	path = ~/dotfiles/git/gitconfig.alias
 	path = ~/gitconfig.user
 	path = ~/gitconfig.proxy.office
 
