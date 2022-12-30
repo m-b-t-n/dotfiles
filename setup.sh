@@ -102,7 +102,6 @@ DOTFILES=(\
 	".vimrc" \
 	".bash_profile" \
 	".bashrc" \
-	".tigrc" \
 	".gvimrc" \
 	".gitconfig" \
 )
@@ -124,6 +123,13 @@ for ((i=0; i<${#DOTFILES[@]}; ++i)); {
 		ln -sfv dotfiles/common/${DOTFILES[${i}]#.} ~/${DOTFILES[${i}]}
 	fi
 }
+
+# tig
+if [[ "${DEBUG_MODE}" == "true" ]]; then
+	echo -e "\tln -sfv dotfiles/tig/tigrc ~/.tigrc"
+else
+	ln -sfv dotfiles/tig/tigrc ~/.tigrc
+fi
 
 # ranger
 if [[ "${DEBUG_MODE}" == "true" ]]; then
