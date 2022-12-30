@@ -18,6 +18,10 @@ hook_add = '''
 [[plugins]]
 repo = 'lambdalisue/fern.vim'
 hook_add = '''
+  augroup AutoRunOnlyGUI
+    autocmd!
+    autocmd GUIEnter * ++nested Fern ~/ -drawer -reveal=%
+  augroup END
 '''
 
 # https://github.com/neoclide/coc.nvim
