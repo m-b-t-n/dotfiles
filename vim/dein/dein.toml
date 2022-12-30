@@ -14,21 +14,6 @@ hook_add = '''
   set helplang=ja,en
 '''
 
-# https://github.com/preservim/nerdtree
-[[plugins]]
-repo = 'scrooloose/nerdtree'
-hook_add = '''
-  let NERDTreeShowHidden = 1
-  let NERDTreeIgnore = [
-        \ 'NTUSER.*$',
-        \ '.[oa]$'
-        \]
-  augroup AutoEnterOnlyGUI
-    autocmd!
-    autocmd GUIEnter * if argc() == 0 && !exists("s:std_in") | execute 'NERDTree' | endif
-  augroup END
-'''
-
 # https://github.com/neoclide/coc.nvim
 [[plugins]]
 repo = 'neoclide/coc.nvim'
