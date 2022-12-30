@@ -98,26 +98,16 @@ else
 fi
 echo "OS=${ENVIRONMENT[0]} HOSTNAME=${ENVIRONMENT[1]} ###"
 
-DOTFILES=(\
-)
-
-if [[ ${ENVIRONMENT[0]} == "linux" ]] || [[ ${ENVIRONMENT[0]} == "macos" ]]; then
-	DOTFILES+=( ".tmux.conf" )
-elif [[ ${ENVIRONMENT[0]} == "windows" ]]; then
-	echo "" > /dev/null; # Do nothing
-else
-	echo -e "Unexpected OS. \nabort"
+if [[ "${ENVIRONMENT[0]}" != "windows" ]] \
+	&& [[ "${ENVIRONMENT[0]}" != "macos" ]] \
+	&& [[ "${ENVIRONMENT[0]}" != "linux" ]]
+then
+	echo "Unexpected environment: ${ENVIRONMENT[0]}"
+	echo "Abort."
 	exit 1
 fi
 
 echo "### Make symlinks..."
-for ((i=0; i<${#DOTFILES[@]}; ++i)); {
-	if [[ "${DEBUG_MODE}" == true ]]; then
-		echo -e "\tln -sfv dotfiles/common/${DOTFILES[${i}]#.} ~/${DOTFILES[${i}]}"
-	else
-		ln -sfv dotfiles/common/${DOTFILES[${i}]#.} ~/${DOTFILES[${i}]}
-	fi
-}
 
 # gitconfig
 if [[ "${DEBUG_MODE}" == "true" ]]; then
