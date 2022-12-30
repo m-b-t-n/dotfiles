@@ -14,6 +14,12 @@ hook_add = '''
   set helplang=ja,en
 '''
 
+# https://github.com/lambdalisue/fern.vim
+[[plugins]]
+repo = 'lambdalisue/fern.vim'
+hook_add = '''
+'''
+
 # https://github.com/neoclide/coc.nvim
 [[plugins]]
 repo = 'neoclide/coc.nvim'
