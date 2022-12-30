@@ -159,6 +159,15 @@ else
 	ln -sfv ~/dotfiles/wezterm ~/.config/wezterm
 fi
 
+# gh
+if [[ "${DEBUG_MODE}" == "true" ]]; then
+	echo -e "\tmkdir -p ~/.config/gh"
+	echo -e "\tln -sfv ~/dotfiles/gh/config.yml ~/.config/gh/config.yml"
+else
+	mkdir -p ~/.config/gh
+	ln -sfv ~/dotfiles/gh/config.yml ~/.config/gh/config.yml
+fi
+
 echo "### Export ENVIRONMENT vars ###"
 if [[ "${DEBUG_MODE}" == "true" ]]; then
 	echo -e "\techo \"DOTFILES_ENV_OS=${ENVIRONMENT[0]}\" >> ~/dotfiles/env/environment_vars"
