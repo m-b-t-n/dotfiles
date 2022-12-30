@@ -1,6 +1,4 @@
-# README
-
-They are my dotfiles.  
+# dotfiles
 
 ## Pre-requirements
 
