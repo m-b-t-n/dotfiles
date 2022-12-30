@@ -99,10 +99,8 @@ fi
 echo "OS=${ENVIRONMENT[0]} HOSTNAME=${ENVIRONMENT[1]} ###"
 
 DOTFILES=(\
-	".vimrc" \
 	".bash_profile" \
 	".bashrc" \
-	".gvimrc" \
 )
 
 if [[ ${ENVIRONMENT[0]} == "linux" ]] || [[ ${ENVIRONMENT[0]} == "macos" ]]; then
@@ -135,6 +133,15 @@ if [[ "${DEBUG_MODE}" == "true" ]]; then
 	echo -e "\tln -sfv dotfiles/tig/tigrc ~/.tigrc"
 else
 	ln -sfv dotfiles/tig/tigrc ~/.tigrc
+fi
+
+# vim
+if [[ "${DEBUG_MODE}" == "true" ]]; then
+	echo -e "\tln -sfv dotfiles/vim/vimrc ~/.vimrc"
+	echo -e "\tln -sfv dotfiles/vim/gvimrc ~/.gvimrc"
+else
+	ln -sfv dotfiles/vim/vimrc ~/.vimrc
+	ln -sfv dotfiles/vim/gvimrc ~/.gvimrc
 fi
 
 # ranger
