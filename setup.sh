@@ -99,8 +99,6 @@ fi
 echo "OS=${ENVIRONMENT[0]} HOSTNAME=${ENVIRONMENT[1]} ###"
 
 DOTFILES=(\
-	".bash_profile" \
-	".bashrc" \
 )
 
 if [[ ${ENVIRONMENT[0]} == "linux" ]] || [[ ${ENVIRONMENT[0]} == "macos" ]]; then
@@ -133,6 +131,15 @@ if [[ "${DEBUG_MODE}" == "true" ]]; then
 	echo -e "\tln -sfv dotfiles/tig/tigrc ~/.tigrc"
 else
 	ln -sfv dotfiles/tig/tigrc ~/.tigrc
+fi
+
+# bash
+if [[ "${DEBUG_MODE}" == "true" ]]; then
+	echo -e "\tln -sfv dotfiles/bash/bash_profile ~/.bash_profile"
+	echo -e "\tln -sfv dotfiles/bash/bashrc ~/.bashrc"
+else
+	ln -sfv dotfiles/bash/bash_profile ~/.bash_profile
+	ln -sfv dotfiles/bash/bashrc ~/.bashrc
 fi
 
 # vim
