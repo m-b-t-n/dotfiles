@@ -114,7 +114,7 @@ repo = 'tyru/open-browser.vim'
 [[plugins]]
 repo = 'reireias/vim-cheatsheet'
 hook_add = '''
-  let g:cheatsheet#cheat_file = '~/dotfiles/common/vim/cheatsheet.md'
+  let g:cheatsheet#cheat_file = '~/dotfiles/vim/cheatsheet.md'
 '''
 
 [[plugins]]
@@ -127,7 +127,7 @@ repo = 'dhruvasagar/vim-table-mode'
 [[plugins]]
 repo = 'mattn/vim-sonictemplate'
 hook_add = '''
-  let g:sonictemplate_vim_template_dir = '~/dotfiles/common/vim/template'
+  let g:sonictemplate_vim_template_dir = '~/dotfiles/vim/template'
 '''
 
 [[plugins]]
