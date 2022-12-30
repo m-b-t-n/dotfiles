@@ -140,10 +140,10 @@ fi
 # ranger
 if [[ "${DEBUG_MODE}" == "true" ]]; then
 	echo -e "\tmkdir -p ~/.config"
-	echo -e "\tln -sfv ~/dotfiles/common/ranger/config ~/.config/ranger"
+	echo -e "\tln -sfv ~/dotfiles/ranger/config ~/.config/ranger"
 else
 	mkdir -p ~/.config
-	ln -sfv ~/dotfiles/common/ranger/config ~/.config/ranger
+	ln -sfv ~/dotfiles/ranger/config ~/.config/ranger
 fi
 
 # wezterm

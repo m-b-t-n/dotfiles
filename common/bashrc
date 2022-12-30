@@ -28,7 +28,7 @@ alias vd='vimdiff'
 alias hub='gh'
 
 # ranger
-source ~/dotfiles/common/ranger/ranger.sh
+source ~/dotfiles/ranger/ranger.sh
 alias r='_ranger'
 
 # PS1
