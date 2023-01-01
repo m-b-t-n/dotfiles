@@ -12,3 +12,5 @@ brew "gh"
 cask "font-ricty-diminished"
 cask "webpquicklook"
 cask "wezterm"
+cask "vlc"
+
