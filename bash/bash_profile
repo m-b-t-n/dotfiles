@@ -4,8 +4,8 @@
 source ~/dotfiles/env/environment_vars
 
 # Load `bash_profile.local` for each platforms
-if [[ -f ~/dotfiles/${DOTFILES_ENV_OS}/bash_profile ]]; then
-	source ~/dotfiles/${DOTFILES_ENV_OS}/bash_profile
+if [[ -f ~/dotfiles/bash/${DOTFILES_ENV_OS}/bash_profile ]]; then
+	source ~/dotfiles/bash/${DOTFILES_ENV_OS}/bash_profile
 fi
 
 if [[ -f ~/.bashrc ]]; then
