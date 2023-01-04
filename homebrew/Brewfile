@@ -13,4 +13,5 @@ cask "font-ricty-diminished"
 cask "webpquicklook"
 cask "wezterm"
 cask "vlc"
+cask "microsoft-edge"
 
