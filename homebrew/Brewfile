@@ -14,4 +14,4 @@ cask "webpquicklook"
 cask "wezterm"
 cask "vlc"
 cask "microsoft-edge"
-
+cask "obsidian"
