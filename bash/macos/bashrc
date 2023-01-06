@@ -35,3 +35,6 @@ alias tmd='tmux detach'
 alias flutter='fvm flutter'
 alias dart='fvm dart'
 
+# homebrew-bundle
+alias bb='brew bundle --verbose --file ~/dotfiles/homebrew/Brewfile'
+
