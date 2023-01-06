@@ -2,4 +2,5 @@
 .DS_Store
 test_setup.sh.log
 env/*
+homebrew/Brewfile.lock.json
 
