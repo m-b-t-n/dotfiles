@@ -17,3 +17,5 @@ cask "wezterm"
 cask "vlc"
 cask "microsoft-edge"
 cask "obsidian"
+mas "The Unarchiver", id: 425424353
+
