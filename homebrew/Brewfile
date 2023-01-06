@@ -22,4 +22,5 @@ cask "microsoft-office"
 mas "The Unarchiver", id: 425424353
 mas "LINE", id: 539883307
 mas "MenuBar Stats", id: 714196447
+mas "Display Menu", id: 549083868
 
