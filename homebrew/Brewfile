@@ -18,4 +18,5 @@ cask "vlc"
 cask "microsoft-edge"
 cask "obsidian"
 mas "The Unarchiver", id: 425424353
+mas "LINE", id: 539883307
 
