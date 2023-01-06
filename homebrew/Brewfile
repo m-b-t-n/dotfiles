@@ -21,4 +21,5 @@ cask "itsycal"
 cask "microsoft-office"
 mas "The Unarchiver", id: 425424353
 mas "LINE", id: 539883307
+mas "MenuBar Stats", id: 714196447
 
