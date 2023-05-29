@@ -71,7 +71,7 @@ verbs: [
     # (on exit you'll be back in broot)
     {
         invocation: terminal
-        key: ctrl-t
+        key: shift-s
         execution: "$SHELL"
         set_working_dir: true
         leave_broot: false
