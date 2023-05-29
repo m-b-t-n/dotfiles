@@ -41,3 +41,8 @@ hook_add = '''
   let g:rustfmt_autosave = 1
 '''
 
+# https://github.com/hjson/vim-hjson
+[[plugins]]
+repo = 'hjson/vim-hjson'
+on_ft = ['hjson']
+
