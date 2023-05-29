@@ -1,6 +1,7 @@
 # Global bashrc
 
 # Set environment vars
+export EDITOR='vim'
 source ~/dotfiles/env/environment_vars
 
 # Readline
