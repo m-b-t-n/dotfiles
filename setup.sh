@@ -107,6 +107,19 @@ then
 	exit 1
 fi
 
+echo "### Export ENVIRONMENT vars ###"
+if [[ "${DEBUG_MODE}" == "true" ]]; then
+	echo -e "\techo \"DOTFILES_ENV_OS=${ENVIRONMENT[0]}\" >> ~/dotfiles/env/environment_vars"
+	echo -e "\techo \"DOTFILES_ENV_HOSTNAME=${ENVIRONMENT[1]}\" >> ~/dotfiles/env/environment_vars"
+else
+	mkdir -p ~/dotfiles/env/
+	if [[ -f ~/dotfiles/env/environment_vars ]]; then
+		rm -f ~/dotfiles/env/environment_vars
+	fi
+	echo "DOTFILES_ENV_OS=${ENVIRONMENT[0]}" >> ~/dotfiles/env/environment_vars
+	echo "DOTFILES_ENV_HOSTNAME=${ENVIRONMENT[1]}" >> ~/dotfiles/env/environment_vars
+fi
+
 echo "### Make symlinks..."
 
 # gitconfig
@@ -150,6 +163,19 @@ else
 	ln -sfv ~/dotfiles/ranger/config ~/.config/ranger
 fi
 
+# broot
+if [[ "${DEBUG_MODE}" == "true" ]]; then
+	echo -e"echo \t\"DOTFILES_ENV_CONFIG_BROOT_ENABLE=y\" >> ~/dotfiles/env/environment_vars"
+	echo -e "\tmkdir -p ~/.config"
+	echo -e "\tln -sfv ~/dotfiles/broot ~/.config/broot"
+else
+	if [[ -e "/usr/local/bin/broot" ]]; then
+		echo "DOTFILES_ENV_CONFIG_BROOT_ENABLE=y" >> ~/dotfiles/env/environment_vars
+		mkdir -p ~/.config
+		ln -sfv ~/dotfiles/broot ~/.config/broot
+	fi
+fi
+
 # wezterm
 if [[ "${DEBUG_MODE}" == "true" ]]; then
 	echo -e "\tmkdir -p ~/.config"
@@ -166,19 +192,6 @@ if [[ "${DEBUG_MODE}" == "true" ]]; then
 else
 	mkdir -p ~/.config/gh
 	ln -sfv ~/dotfiles/gh/config.yml ~/.config/gh/config.yml
-fi
-
-echo "### Export ENVIRONMENT vars ###"
-if [[ "${DEBUG_MODE}" == "true" ]]; then
-	echo -e "\techo \"DOTFILES_ENV_OS=${ENVIRONMENT[0]}\" >> ~/dotfiles/env/environment_vars"
-	echo -e "\techo \"DOTFILES_ENV_HOSTNAME=${ENVIRONMENT[1]}\" >> ~/dotfiles/env/environment_vars"
-else
-	mkdir -p ~/dotfiles/env/
-	if [[ -f ~/dotfiles/env/environment_vars ]]; then
-		rm -f ~/dotfiles/env/environment_vars
-	fi
-	echo "DOTFILES_ENV_OS=${ENVIRONMENT[0]}" >> ~/dotfiles/env/environment_vars
-	echo "DOTFILES_ENV_HOSTNAME=${ENVIRONMENT[1]}" >> ~/dotfiles/env/environment_vars
 fi
 
 echo "### Done. ###"
