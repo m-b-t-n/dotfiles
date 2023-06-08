@@ -1,20 +1,25 @@
 # My Cheat Sheet
 
-## All of lists
+## Built-In and misc
 
-| cmd               | description                                  |
-|-------------------|----------------------------------------------|
-| tabnew            | タブを新規に開く                             |
-| gt                | 次のタブに移動する                           |
-| gT                | 前のタブに移動する                           |
-| :nohl             | 検索した単語のハイライトを解除する           |
-| :%!xxd            | hexdump っぽく変換する                       |
-| :buffers          | バッファの一覧を表示する                     |
-| :ls               | 同上                                         |
-| :vsp #{buf_num}   | {buf_num} 番目のバッファを垂直分割で開く     |
-| :sp #{buf_num}    | {buf_num} 番目のバッファを水平分割で開く     |
-| :make             | PlantUML 図を生成する                        |
-| :help @en         | 英語版のヘルプを表示する                     |
+| mode            | cmd             | description                              |
+|-----------------|-----------------|------------------------------------------|
+| COMMAND         | tabnew          | タブを新規に開く                         |
+| NORMAL          | gt              | 次のタブに移動する                       |
+| NORMAL          | gT              | 前のタブに移動する                       |
+| COMMAND         | :nohl           | 検索した単語のハイライトを解除する       |
+| COMMAND         | :%!xxd          | hexdump っぽく変換する                   |
+| COMMAND         | :buffers        | バッファの一覧を表示する                 |
+| COMMAND         | :ls             | 同上                                     |
+| COMMAND         | :vsp #{buf_num} | {buf_num} 番目のバッファを垂直分割で開く |
+| COMMAND         | :sp #{buf_num}  | {buf_num} 番目のバッファを水平分割で開く |
+| COMMAND         | :make           | PlantUML 図を生成する                    |
+| COMMAND         | :help @en       | 英語版のヘルプを表示する                 |
+| COMMAND         | :echo {VAR}     | 変数 {VAR} の中身を表示する              |
+| COMMAND         | :echo &{OPTION} | オプション {OPTION} の中身を表示する     |
+| COMMAND         | :e ++ff=unix    | fileformat を UNIX (LF) で開き直す       |
+| COMMAND         | :setl ff=unix   | 同上                                     |
+| COMMAND, INSERT | C-v + C-m       | CR 制御文字 (^M) を打つ                  |
 
 ## vim-table-mode
 
