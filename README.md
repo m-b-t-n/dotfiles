@@ -1,5 +1,30 @@
 # dotfiles
 
+## How to setup
+
+Clone this repository into your `$HOME` directory.
+
+```sh
+$ cd $HOME
+$ git clone git@github.com:m-b-t-n/dotfiles.git -b master
+```
+
+Run `setup.sh` on your `$HOME` directory.
+
+```sh
+$ bash dotfiles/setup.sh
+```
+
+## How to test setup.sh
+
+Run `test_setup.sh` on your `$HOME` directory.
+
+```sh
+$ bash dotfiles/test_setup.sh
+```
+
+You can check the result by seeing `dotfiles/test_setup.sh.log`.
+
 ## Pre-requirements
 
 ### Common
@@ -48,24 +73,6 @@ $ cat ~/gitconfig.user
 ### Linux
 
 * Under checking...
-
-## How to setup
-
-Run `setup.sh` on your `$HOME` directory.
-
-```sh
-$ bash dotfiles/setup.sh
-```
-
-## How to test setup.sh
-
-Run `test_setup.sh` on your `$HOME` directory.
-
-```sh
-$ bash dotfiles/test_setup.sh
-```
-
-You can check the result by seeing `dotfiles/test_setup.sh.log`.
 
 ## Structures
 
