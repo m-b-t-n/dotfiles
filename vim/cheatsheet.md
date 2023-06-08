@@ -32,13 +32,13 @@
 
 ## coc.nvim
 
-| mode   | cmd | original_cmd                 | description                        |
-|--------|-----|------------------------------|------------------------------------|
-| NORMAL | gd  | <Plug>(coc-definition)       | 定義先ファイルに飛ぶ               |
-| NORMAL | gy  | <Plug>(coc-type-definition)  | typedef の定義先ファイルに飛ぶ     |
-| NORMAL | gi  | <Plug>(coc-implementation)   | 実装先に飛ぶ                       |
-| NORMAL | gr  | <Plug>(coc-references)       | 参照されているリスト               |
-| NORMAL | K   | :call s:show_documentation() | (filetype == vim) ヘルプを表示する |
-|        |     |                              | docs をポップアップ表示する        |
-| NORMAL | F2  | <Plug>(coc-rename)           | 一括リネームする                   |
+| mode   | cmd | original_cmd                 | description                                   |
+|--------|-----|------------------------------|-----------------------------------------------|
+| NORMAL | gd  | \<Plug>(coc-definition)      | 定義先ファイルに飛ぶ                          |
+| NORMAL | gy  | \<Plug>(coc-type-definition) | typedef の定義先ファイルに飛ぶ                |
+| NORMAL | gi  | \<Plug>(coc-implementation)   | 実装先に飛ぶ                                  |
+| NORMAL | gr  | \<Plug>(coc-references)       | 参照されているリスト                          |
+| NORMAL | K   | :call s:show_documentation() | (filetype == vim) ヘルプを表示する            |
+|        |     |                              | (filetype != vim) docs をポップアップ表示する |
+| NORMAL | F2  | \<Plug>(coc-rename)           | 一括リネームする                              |
 
