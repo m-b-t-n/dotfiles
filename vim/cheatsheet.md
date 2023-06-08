@@ -14,9 +14,14 @@
 | :vsp #{buf_num}   | {buf_num} 番目のバッファを垂直分割で開く     |
 | :sp #{buf_num}    | {buf_num} 番目のバッファを水平分割で開く     |
 | :make             | PlantUML 図を生成する                        |
-| :TableModeEnable  | テーブルモードに入る                         |
-| :TableModeDisable | テーブルモードを抜ける                       |
 | :help @en         | 英語版のヘルプを表示する                     |
+
+## vim-table-mode
+
+| mode   | cmd               | original_cmd | description            |
+|--------|-------------------|--------------|------------------------|
+| NORMAL | :TableModeEnable  | same as left | テーブルモードに入る   |
+| NORMAL | :TableModeDisable | same as left | テーブルモードを抜ける |
 
 ## winresizer
 
