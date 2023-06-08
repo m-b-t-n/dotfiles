@@ -65,6 +65,7 @@ set nowritebackup
 set noundofile
 set nobackup
 set cmdheight=2
+set fileformats=unix,dos,mac
 set fileencodings=utf-8,sjis,cp932,euc-jp
 set wildmenu
 set signcolumn=yes
