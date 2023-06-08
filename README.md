@@ -25,40 +25,60 @@ $ bash dotfiles/test_setup.sh
 
 You can check the result by seeing `dotfiles/test_setup.sh.log`.
 
-## Pre-requirements
+## Requirements
 
 ### Common
 
 * Set user settings in `$HOME/gitconfig.user`. The sample is following;
-
-```sh
-$ cat ~/gitconfig.user
-[user]
-	email = mbtn_0xff@outlook.com
-	name = m-b-t-n
-```
+  ```sh
+  $ cat ~/gitconfig.user
+  [user]
+  	email = mbtn_0xff@outlook.com
+  	name = m-b-t-n
+  ```
 
 * [Ricty](https://rictyfonts.github.io/)
 
 * [Node.js](https://nodejs.org/en/)
 
-### Windows
+### OS-specific
 
-* [Git for Windows](https://git-scm.com/download/win)
+<details>
+<summary>For Windows</summary>
 
-### macOS
+* Install [Git for Windows](https://git-scm.com/download/win)
 
-* [Homebrew](https://brew.sh/)
+* If you have been used WSL/WSL2, see below Linux section
+
+</details>
+
+<details>
+<summary>For macOS</summary>
+
+* Install [Homebrew](https://brew.sh/)
   ```sh
   ### Below is the **DEAD COPY** of official installation
   $ /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
   ```
 
-* Change default shell from zsh to bash
+* Install newly bash (v5+)
   ```sh
   ### Install newly bash
   $ brew install bash
 
+  ### Check the version of bash
+  ### The sample is following at 2023/06/09
+  $ bash --version
+  GNU bash, version 5.2.15(1)-release (x86_64-apple-darwin21.6.0)
+  Copyright (C) 2022 Free Software Foundation, Inc.
+  License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+
+  This is free software; you are free to change and redistribute it.
+  There is NO WARRANTY, to the extent permitted by law.
+  ```
+
+* Change default shell from zsh to bash
+  ```sh
   ### Check where is bash installed
   $ brew config | grep -i prefix
   HOMEBREW_PREFIX: /usr/local # <= will need for below steps
@@ -70,9 +90,16 @@ $ cat ~/gitconfig.user
   $ sudo reboot
   ```
 
-### Linux
+</details>
 
-* Under checking...
+<details>
+<summary>For Linux</summary>
+
+* I think there is no need to do because most distro have been selected bash for default shell
+
+* If not, you need to change default shell to bash, refer to macOS section
+
+</details>
 
 ## Structures
 
