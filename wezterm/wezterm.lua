@@ -22,8 +22,8 @@ end
 
 return {
 	check_for_updates = false,
-	font = wezterm.font("Ricty Diminished Discord", {weight="Regular", stretch="Normal", style="Normal"}),
-	font_size = 20.0,
+	font = wezterm.font("PlemolJP35", {weight="Medium", stretch="Normal", style="Normal"}),
+	font_size = 16.5,
 	color_scheme = "Pastel White (terminal.sexy)",
 	window_background_opacity = 0.7,
 	text_background_opacity = 0.7,

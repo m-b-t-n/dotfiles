@@ -10,7 +10,7 @@ if has('win32') || has('win64')
 endif
 
 if has('mac') || has('gui_macvim')
-  set guifont=Ricty\ Diminished\ Discord\ Regular:h20
+  set guifont=PlemolJP35\ Medium:h16.5
 endif
 
 " Hidden menu-bar && tool-bar
