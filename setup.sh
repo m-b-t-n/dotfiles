@@ -194,6 +194,13 @@ else
 	ln -sfv ~/dotfiles/gh/config.yml ~/.config/gh/config.yml
 fi
 
+# editorconfig
+if [[ "${DEBUG_MODE}" == "true" ]]; then
+	echo -e "\tln -sfv ~/dotfiles/editorconfig/editorconfig ~/.editorconfig"
+else
+	ln -sfv ~/dotfiles/editorconfig/editorconfig ~/.editorconfig
+fi
+
 echo "### Done. ###"
 exit 0
 
