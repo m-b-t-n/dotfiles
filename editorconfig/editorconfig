@@ -1,0 +1,48 @@
+# Global .editorconfig
+
+root = true
+
+[*]
+indent_style = tab
+tab_width = 8
+end_of_line = lf
+charset = utf-8
+trim_trailing_whitespace = true
+
+[*.{md,mkd}]
+indent_style = space
+indent_size = 2
+trim_trailing_whitespace = false
+
+[*.{uml,puml,plantuml,pu}]
+indent_style = space
+indent_size = 2
+
+[*.{json,hjson}]
+indent_style = space
+indent_size = 2
+
+[*.{yaml,yml}]
+indent_style = space
+indent_size = 2
+
+[*.toml]
+indent_style = space
+indent_size = 2
+
+[**/{vim,gvim}rc]
+indent_style = space
+indent_size = 2
+
+[*.dart]
+indent_style = space
+indent_size = 2
+
+[*.rs]
+indent_style = space
+indent_size = 4
+
+[*.py]
+indent_style = space
+indent_size = 4
+
