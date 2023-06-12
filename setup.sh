@@ -124,9 +124,9 @@ echo "### Make symlinks..."
 
 # gitconfig
 if [[ "${DEBUG_MODE}" == "true" ]]; then
-	echo -e "\tln -sfv dotfiles/git/gitconfig ~/.gitconfig"
+	echo -e "\tln -sfv ~/dotfiles/git ~/.config"
 else
-	ln -sfv dotfiles/git/gitconfig ~/.gitconfig
+	ln -sfv ~/dotfiles/git ~/.config
 fi
 
 # tig
