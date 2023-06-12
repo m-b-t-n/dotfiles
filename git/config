@@ -1,7 +1,7 @@
 [Include]
 	path = ~/.config/git/alias
-	path = ~/gitconfig.user
-	path = ~/gitconfig.proxy.office
+	path = ~/dotfiles/env/git/user
+	path = ~/dotfiles/env/git/proxy
 
 [core]
 	editor = vim
