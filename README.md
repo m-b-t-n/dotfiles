@@ -15,6 +15,16 @@ Run `setup.sh` on your `$HOME` directory.
 $ bash dotfiles/setup.sh
 ```
 
+After that, set your global user/email settings of Git into `dotfiles/env/git/user`.
+The sample is following;
+
+```sh
+$ cat ~/dotfiles/env/git/user
+[user]
+        email = mbtn_0xff@outlook.com
+        name = m-b-t-n
+```
+
 ## How to test setup.sh
 
 Run `test_setup.sh` on your `$HOME` directory.
@@ -28,14 +38,6 @@ You can check the result by seeing `dotfiles/test_setup.sh.log`.
 ## Requirements
 
 ### Common
-
-* Set user settings in `$HOME/gitconfig.user`. The sample is following;
-  ```sh
-  $ cat ~/gitconfig.user
-  [user]
-  	email = mbtn_0xff@outlook.com
-  	name = m-b-t-n
-  ```
 
 * [Ricty](https://rictyfonts.github.io/)
 
@@ -103,43 +105,50 @@ You can check the result by seeing `dotfiles/test_setup.sh.log`.
 
 ## Structures
 
+:information_source: Some elements have been omitted.
+
 ```sh
+$ tree -L 3 dotfiles/
 ├── README.md
 ├── bash
-│   ├── bash_profile     # -> `~/.bash_profile`
-│   ├── bashrc           # -> `~/.bashrc`
-│   ├── linux
-│   ├── macos
-│   └── windows
+│   ├── bash_profile           # -> ~/.bash_profile
+│   ├── bashrc                 # -> ~/.bashrc
+│   ├── linux/
+│   ├── macos/
+│   └── windows/
+├── broot/                      # -> ~/.config/broot/
+├── editorconfig
+│   └── editorconfig           # -> ~/.editorconfig
 ├── env
-│   └── environment_vars
-├── git
-│   ├── gitconfig        # -> `~/.gitconfig`
-│   └── gitconfig.alias
+│   ├── environment_vars       # Need to create by your own
+│   └── git
+│       └── user               # Need to create by your own
+├── gh
+│   └── config.yml             # -> ~/.config/gh/config.yml
+├── git                         # -> ~/.config/git/
+│   ├── alias
+│   └── config
 ├── plantuml
-│   ├── bin
+│   ├── bin/
 │   └── txt2plantuml.sh
 ├── ranger
-│   ├── config           # -> `~/.config/ranger`
+│   ├── config/                # -> ~/.config/ranger/
 │   └── ranger.sh
 ├── setup.sh
 ├── test_setup.sh
 ├── tig
-│   └── tigrc            # -> `~/.tigrc`
-├── tmux
-│   ├── linux
-│   ├── macos
-│   ├── tmux.conf
-│   └── tmux.startup
+│   └── tigrc                  # -> ~/.tigrc
+├── tmux/
 ├── vim
 │   ├── cheatsheet.md
 │   ├── coc
-│   ├── dein
-│   ├── gvimrc           # -> `~/.gvimrc`
-│   ├── template
-│   └── vimrc            # -> `~/.vimrc`
-└── wezterm               # -> `~/.config/wezterm`
+│   │   └── coc-settings.json # -> ~/.vim/coc-settings.json
+│   ├── dein/
+│   ├── gvimrc                 # -> ~/.gvimrc
+│   ├── template/
+│   └── vimrc                  # -> ~/.vimrc
+└── wezterm                     # -> ~/.config/wezterm/
     ├── keys.lua
     └── wezterm.lua
-```
 
+```

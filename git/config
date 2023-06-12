@@ -1,10 +1,10 @@
 [Include]
-	path = ~/dotfiles/git/gitconfig.alias
-	path = ~/gitconfig.user
-	path = ~/gitconfig.proxy.office
+	path = ~/.config/git/alias
+	path = ~/dotfiles/env/git/user
+	path = ~/dotfiles/env/git/proxy
 
 [core]
-	editor = $(which vim)
+	editor = vim
 	quotepath = false
 
 [pull]
