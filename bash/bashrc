@@ -37,6 +37,11 @@ if [[ ${DOTFILES_ENV_CONFIG_BROOT_ENABLE} == "y" ]]; then
 	source ~/.config/broot/launcher/bash/br
 fi
 
+# flutter
+if [[ ${DOTFILES_ENV_CONFIG_FLUTTER_ENABLE} == "y" ]]; then
+	source ~/dotfiles/bash/flutter_completion.bash
+fi
+
 # PS1
 export PS1='\[\e[1;35m\]\u:\[\e[1;33m\]\w\[\e[00m\]\[\e[1;31m\]$(__git_ps1)\[\e[00m\]> '
 
@@ -47,65 +52,4 @@ bind 'set vi-ins-mode-string I)'
 
 # Road local bashrc & aliases
 source ~/dotfiles/bash/${DOTFILES_ENV_OS}/bashrc
-
-#
-# Installation:
-#
-# Via shell config file  ~/.bashrc  (or ~/.zshrc)
-#
-#   Append the contents to config file
-#   'source' the file in the config file
-#
-# You may also have a directory on your system that is configured
-#    for completion files, such as:
-#
-#    /usr/local/etc/bash_completion.d/
-
-###-begin-flutter-completion-###
-
-if type complete &>/dev/null; then
-  __flutter_completion() {
-    local si="$IFS"
-    IFS=$'\n' COMPREPLY=($(COMP_CWORD="$COMP_CWORD" \
-                           COMP_LINE="$COMP_LINE" \
-                           COMP_POINT="$COMP_POINT" \
-                           flutter completion -- "${COMP_WORDS[@]}" \
-                           2>/dev/null)) || return $?
-    IFS="$si"
-  }
-  complete -F __flutter_completion flutter
-elif type compdef &>/dev/null; then
-  __flutter_completion() {
-    si=$IFS
-    compadd -- $(COMP_CWORD=$((CURRENT-1)) \
-                 COMP_LINE=$BUFFER \
-                 COMP_POINT=0 \
-                 flutter completion -- "${words[@]}" \
-                 2>/dev/null)
-    IFS=$si
-  }
-  compdef __flutter_completion flutter
-elif type compctl &>/dev/null; then
-  __flutter_completion() {
-    local cword line point words si
-    read -Ac words
-    read -cn cword
-    let cword-=1
-    read -l line
-    read -ln point
-    si="$IFS"
-    IFS=$'\n' reply=($(COMP_CWORD="$cword" \
-                       COMP_LINE="$line" \
-                       COMP_POINT="$point" \
-                       flutter completion -- "${words[@]}" \
-                       2>/dev/null)) || return $?
-    IFS="$si"
-  }
-  compctl -K __flutter_completion flutter
-fi
-
-###-end-flutter-completion-###
-
-## Generated 2022-03-23 02:19:45.807699Z
-## By /Users/sonod/Apps/flutter/bin/cache/flutter_tools.snapshot
 
