@@ -32,6 +32,8 @@ alias tma='tmux attach'
 alias tmd='tmux detach'
 
 # flutter
-alias flutter='fvm flutter'
-alias dart='fvm dart'
+if [[ ${DOTFILES_ENV_CONFIG_FLUTTER_ENABLE} = "y" ]]; then
+	alias flutter='fvm flutter'
+	alias dart='fvm dart'
+fi
 
