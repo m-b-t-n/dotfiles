@@ -56,6 +56,3 @@ fi
 
 ###-end-flutter-completion-###
 
-## Generated 2022-03-23 02:19:45.807699Z
-## By /Users/sonod/Apps/flutter/bin/cache/flutter_tools.snapshot
-
