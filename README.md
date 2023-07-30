@@ -82,14 +82,10 @@ You can check the result by seeing `dotfiles/test_setup.sh.log`.
 
 * Change default shell from zsh to bash
   ```sh
-  ### Check where is bash installed
-  $ brew config | grep -i prefix
-  HOMEBREW_PREFIX: /usr/local # <= will need for below steps
-
   ### Change default shell
-  $ BASH_PATH="/usr/local/bin/bash"
-  $ sudo echo ${BASH_PATH} >> /etc/shells
-  $ sudo chsh -s ${BASH_PATH} $(whoami)
+  $ BASH_PATH="$(brew --prefix)/bin/bash"
+  $ sudo echo "${BASH_PATH}" >> /etc/shells
+  $ sudo chsh -s "${BASH_PATH}" $(whoami)
   $ sudo reboot
   ```
 
