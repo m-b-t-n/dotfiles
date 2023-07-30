@@ -39,7 +39,8 @@ You can check the result by seeing `dotfiles/test_setup.sh.log`.
 
 ### Common
 
-* [Ricty](https://rictyfonts.github.io/)
+* [PlemolJP fonts](https://github.com/yuru7/PlemolJP)
+  - Especially **PlemolJP35**, others are not required
 
 * [Node.js](https://nodejs.org/en/)
 
