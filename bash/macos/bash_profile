@@ -14,6 +14,3 @@ if [[ ${DOTFILES_ENV_CONFIG_FLUTTER_ENABLE} = "y" ]]; then
 	export CHROME_EXECUTABLE='/Applications/Microsoft Edge.app/Contents/MacOS/Microsoft Edge'
 fi
 
-# Rust w/ rustup
-source ~/.cargo/env
-
