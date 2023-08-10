@@ -3,6 +3,11 @@
 # Set environment vars
 source ~/dotfiles/env/environment_vars
 
+# Rust
+if [[ ${DOTFILES_ENV_CONFIG_RUST_ENABLE} == "y" ]]; then
+	source ~/.cargo/env
+fi
+
 # Load `bash_profile.local` for each platforms
 if [[ -f ~/dotfiles/bash/${DOTFILES_ENV_OS}/bash_profile ]]; then
 	source ~/dotfiles/bash/${DOTFILES_ENV_OS}/bash_profile
