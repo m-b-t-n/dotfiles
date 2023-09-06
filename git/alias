@@ -7,6 +7,7 @@
 	br = branch
 	co = checkout
 	cm = commit
+	cme = commit --allow-empty
 	tar = archive --format=tar
 	df = diff
 	dfc = diff --cached
