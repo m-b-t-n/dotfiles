@@ -25,10 +25,10 @@
 
 ## vim-table-mode
 
-| mode   | cmd               | original_cmd | description            |
-|--------|-------------------|--------------|------------------------|
-| NORMAL | :TableModeEnable  | same as left | テーブルモードに入る   |
-| NORMAL | :TableModeDisable | same as left | テーブルモードを抜ける |
+| mode   | cmd               | original_cmd      | description                |
+|--------|-------------------|-------------------|----------------------------|
+| NORMAL | C-t               | :TableModeToggle  | テーブルモードを切り替える |
+| NORMAL | rl                | :TableModeRealign | テーブルを揃え直す         |
 
 ## winresizer
 
