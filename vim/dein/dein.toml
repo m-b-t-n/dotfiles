@@ -115,8 +115,13 @@ hook_add = '''
 [[plugins]]
 repo = 'simeji/winresizer'
 
+# https://github.com/dhruvasagar/vim-table-mode
 [[plugins]]
 repo = 'dhruvasagar/vim-table-mode'
+hook_add = '''
+  nnoremap <silent> <C-t> :TableModeToggle<CR>
+  nnoremap <silent> rl :TableModeRealign<CR>
+'''
 
 # https://github.com/mattn/vim-sonictemplate
 [[plugins]]
