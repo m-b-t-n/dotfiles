@@ -1,6 +1,10 @@
 # Homebrew
 export PATH="/opt/homebrew/bin:$PATH"
 
+# bash-completion
+[[ -r "/opt/homebrew/etc/profile.d/bash_completion.sh" ]] \
+	&& . "/opt/homebrew/etc/profile.d/bash_completion.sh"
+
 # Node.js
 export PATH="$PATH:/Users/$(whoami)/.nodebrew/current/bin"
 
