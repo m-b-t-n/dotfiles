@@ -23,6 +23,15 @@
 | COMMAND         | :echo expand('%')   | 相対パスでファイル名を取得する           |
 | COMMAND         | :echo expand('%:p)' | 絶対パスでファイル名を取得する           |
 
+## vimdiff
+
+| mode   | cmd | description                          |
+| ---    | --- | ---                                  |
+| NORMAL | [c  | 前（上方）の diff の先頭へ移動する   |
+| NORMAL | ]c  | 次（下方）の diff の先頭へ移動する   |
+| NORMAL | do  | 今いる方に、隣から diff を持ってくる |
+| NORMAL | dp  | 今いる方から、隣へ diff を入れる     |
+
 ## vim-table-mode
 
 | mode   | cmd               | original_cmd      | description                |
