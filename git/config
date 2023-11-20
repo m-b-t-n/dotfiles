@@ -7,6 +7,9 @@
 	editor = vim
 	quotepath = false
 
+[fetch]
+	prune = true
+
 [pull]
 	rebase = false
 
