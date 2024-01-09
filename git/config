@@ -12,6 +12,7 @@
 
 [pull]
 	rebase = false
+	prune = true
 
 [color]
 	ui = auto
