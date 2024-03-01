@@ -4,7 +4,7 @@
 # NOTE: Overwrite "Reload & refresh view" func.
 # URI: https://qiita.com/numanomanu/items/513d62fb4a7921880085#_reference-db4b533640452a36cf63
 
-bind main R !git rebase -i %(commit)
+bind main R !git rebase -i --autosquash %(commit)
 bind diff R !git rebase -i %(commit)
 
 bind main V !git revert %(commit)
