@@ -1,0 +1,19 @@
+name: 'workflow name'
+
+on:
+  pull_request:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+{{_cursor_}}
+
+jobs:
+  a-job:
+    runs-on:
+    steps:
+      - name: 'hoge'
+        run: |
+          echo 'fuga'
+
