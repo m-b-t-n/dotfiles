@@ -13,7 +13,7 @@ export PATH="/usr/local/opt/ruby/bin:$PATH"
 
 # Flutter
 if [[ ${DOTFILES_ENV_CONFIG_FLUTTER_ENABLE} = "y" ]]; then
-	export FVM_HOME="$HOME/.fvm"
+	export FVM_CACHE_PATH="$HOME/.fvm"
 	export PATH="$PATH:$HOME/.pub-cache/bin:$FVM_HOME/default/bin"
 	export CHROME_EXECUTABLE='/Applications/Microsoft Edge.app/Contents/MacOS/Microsoft Edge'
 fi
