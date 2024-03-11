@@ -25,5 +25,4 @@
 	ri = rebase -i
 	sw = switch
 	fc = fetch
-	fcp = fetch -p
 
