@@ -5,6 +5,8 @@
 	pf = push --force-with-lease
 	pd = push --delete
 	br = branch
+	bd = branch -d
+	bD = branch -D
 	co = checkout
 	cm = commit
 	cme = commit --allow-empty
@@ -23,5 +25,4 @@
 	ri = rebase -i
 	sw = switch
 	fc = fetch
-	fcp = fetch -p
 
