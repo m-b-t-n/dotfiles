@@ -1,6 +1,11 @@
 # Color Settings
 # export TERM=xterm-256color
 
+# bash-completion
+if [[ -f /etc/bash_completion ]]; then
+       source /etc/bash_completion
+fi
+
 # For "__git_ps1"
 # <http://d.hatena.ne.jp/gnarl/20110901/1314846241>
 GIT_PS1_SHOWDIRTYSTATE=1
@@ -18,7 +23,7 @@ alias llh='ls -lhF'
 alias llah='ls -lahF'
 
 # ranger
-source $HOME/dotfiles/common/ranger/ranger.sh
+source $HOME/dotfiles/ranger/ranger.sh
 alias r='_ranger'
 alias tm='tmux new-session \; source-file ~/dotfiles/common/tmux/tmux.startup'
 alias tml='tmux ls'

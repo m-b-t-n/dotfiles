@@ -34,6 +34,8 @@ hook_add = '''
     let g:coc_node_path="C:/Program\ Files/nodejs/node.exe"
   elseif has('mac')
     let g:coc_node_path="~/.nodebrew/current/bin/node"
+  elseif has('linux')
+    let g:coc_node_path="/usr/bin/node"
   endif
 
   nmap <silent> gd <Plug>(coc-definition)
