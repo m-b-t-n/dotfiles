@@ -38,6 +38,25 @@ hook_add = '''
     let g:coc_node_path="/usr/bin/node"
   endif
 
+  let g:coc_global_extensions = [
+        \'coc-prettier',
+        \'coc-marketplace',
+        \'coc-markdownlint',
+        \'coc-github',
+        \'coc-git',
+        \'coc-eslint',
+        \'@yaegassy/coc-pylsp',
+        \'coc-yaml',
+        \'coc-xml',
+        \'coc-tsserver',
+        \'coc-solargraph',
+        \'coc-sh',
+        \'coc-rust-analyzer',
+        \'coc-json',
+        \'coc-flutter',
+        \'coc-css'
+        \]
+
   nmap <silent> gd <Plug>(coc-definition)
   nmap <silent> gy <Plug>(coc-type-definition)
   nmap <silent> gi <Plug>(coc-implementation)
