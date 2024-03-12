@@ -18,7 +18,7 @@ alias llh='ls -lhF'
 alias llah='ls -lahF'
 
 # ranger
-source $HOME/dotfiles/common/ranger/ranger.sh
+source $HOME/dotfiles/ranger/ranger.sh
 alias r='_ranger'
 alias tm='tmux new-session \; source-file ~/dotfiles/common/tmux/tmux.startup'
 alias tml='tmux ls'
