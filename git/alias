@@ -2,7 +2,7 @@
 	st = status
 	pl = pull
 	pu = push -u
-	pf = push --force-with-lease
+	pf = push --force-with-lease --force-if-includes
 	pd = push --delete
 	br = branch
 	bd = branch -d
