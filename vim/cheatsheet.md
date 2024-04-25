@@ -22,7 +22,7 @@
 | COMMAND, INSERT | C-v + C-m           | CR 制御文字 (^M) を打つ                        |
 | COMMAND         | :echo expand('%')   | 相対パスでファイル名を取得する                 |
 | COMMAND         | :echo expand('%:p)' | 絶対パスでファイル名を取得する                 |
-| COMMAND         | :r! $(shellcmd)     | $(shellcmd) の実行結果を挿入する               |
+| COMMAND         | :r! shellcmd        | shellcmd の実行結果を挿入する                  |
 | NORMAL          | ~                   | カーソル下の英字を {大文字, 小文字} に変換する |
 | NORMAL          | g{u, U, ~}          | u は小文字, U は大文字, ~ は現在と逆           |
 |                 |                     | `guiw` でカーソル下の単語をすべて小文字にする  |
