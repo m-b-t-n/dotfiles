@@ -26,7 +26,6 @@ alias :evsp='vim -O'
 alias :r='vim -R'
 alias :q='exit'
 alias vd='vimdiff'
-alias hub='gh'
 
 alias wezssh='wezterm cli spawn --domain-name'
 

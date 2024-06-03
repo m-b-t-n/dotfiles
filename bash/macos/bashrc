@@ -25,12 +25,6 @@ fi
 
 GIT_PS1_SHOWDIRTYSTATE=true
 
-# tmux
-alias tm='tmux new-session \; source-file ~/dotfiles/common/tmux/tmux.startup'
-alias tml='tmux ls'
-alias tma='tmux attach'
-alias tmd='tmux detach'
-
 # flutter
 if [[ ${DOTFILES_ENV_CONFIG_FLUTTER_ENABLE} = "y" ]]; then
 	alias flutter='fvm flutter'
