@@ -28,6 +28,8 @@ alias :q='exit'
 alias vd='vimdiff'
 alias hub='gh'
 
+alias wezssh='wezterm cli spawn --domain-name'
+
 # ranger
 source ~/dotfiles/ranger/ranger.sh
 alias r='_ranger'
