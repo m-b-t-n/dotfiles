@@ -1,6 +1,17 @@
 local wezterm = require 'wezterm'
 local keybinds = require 'keys'
 
+-- SSH Domains
+local ssh_domains = {}
+for host, config in pairs(wezterm.enumerate_ssh_hosts()) do
+	table.insert(ssh_domains, {
+		name = host,
+		remote_address = config["hostname"],
+		username = config["user"],
+		ssh_option = { identityfile = config["identityfile"] },
+	})
+end
+
 wezterm.on(
 'format-tab-title',
 -- function (tab, tabs, panes, config, hover, max_width)
@@ -21,6 +32,7 @@ end
 )
 
 return {
+	ssh_domains = ssh_domains,
 	check_for_updates = false,
 	font = wezterm.font("PlemolJP35", {weight="Medium", stretch="Normal", style="Normal"}),
 	font_size = 16.5,
