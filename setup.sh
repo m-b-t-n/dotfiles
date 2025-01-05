@@ -122,13 +122,6 @@ fi
 
 echo "### Make symlinks..."
 
-# gitconfig
-if [[ "${DEBUG_MODE}" == "true" ]]; then
-	echo -e "\tln -sfv ~/dotfiles/git ~/.config"
-else
-	ln -sfv ~/dotfiles/git ~/.config
-fi
-
 # tig
 if [[ "${DEBUG_MODE}" == "true" ]]; then
 	echo -e "\tln -sfv dotfiles/tig/tigrc ~/.tigrc"
@@ -154,34 +147,37 @@ else
 	ln -sfv dotfiles/vim/gvimrc ~/.gvimrc
 fi
 
+mkdir -p ~/.config
+
+# gitconfig
+if [[ "${DEBUG_MODE}" == "true" ]]; then
+	echo -e "\tln -sfv ~/dotfiles/git ~/.config/git"
+else
+	ln -sfv ~/dotfiles/git ~/.config/git
+fi
+
 # ranger
 if [[ "${DEBUG_MODE}" == "true" ]]; then
-	echo -e "\tmkdir -p ~/.config"
 	echo -e "\tln -sfv ~/dotfiles/ranger/config ~/.config/ranger"
 else
-	mkdir -p ~/.config
 	ln -sfv ~/dotfiles/ranger/config ~/.config/ranger
 fi
 
 # broot
 if [[ "${DEBUG_MODE}" == "true" ]]; then
 	echo -e"echo \t\"DOTFILES_ENV_CONFIG_BROOT_ENABLE=y\" >> ~/dotfiles/env/environment_vars"
-	echo -e "\tmkdir -p ~/.config"
 	echo -e "\tln -sfv ~/dotfiles/broot ~/.config/broot"
 else
 	if [[ -e "/usr/local/bin/broot" ]]; then
 		echo "DOTFILES_ENV_CONFIG_BROOT_ENABLE=y" >> ~/dotfiles/env/environment_vars
-		mkdir -p ~/.config
 		ln -sfv ~/dotfiles/broot ~/.config/broot
 	fi
 fi
 
 # wezterm
 if [[ "${DEBUG_MODE}" == "true" ]]; then
-	echo -e "\tmkdir -p ~/.config"
 	echo -e "\tln -sfv ~/dotfiles/wezterm ~/.config/wezterm"
 else
-	mkdir -p ~/.config
 	ln -sfv ~/dotfiles/wezterm ~/.config/wezterm
 fi
 
