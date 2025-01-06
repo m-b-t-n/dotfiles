@@ -26,7 +26,12 @@ require("lazy").setup({
   spec = {
     -- add your plugins here
     { "nvim-treesitter/nvim-treesitter", build = ":TSUpdate" },
-    { "vim-jp/vimdoc-ja" }
+    { "vim-jp/vimdoc-ja" },
+    {
+       "m4xshen/hardtime.nvim",
+       dependencies = { "MunifTanjim/nui.nvim" },
+       opts = {}
+    },
   },
   -- Configure any other settings here. See the documentation for more details.
   -- colorscheme that will be used when installing plugins.
