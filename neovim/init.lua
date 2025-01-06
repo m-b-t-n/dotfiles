@@ -25,7 +25,8 @@ vim.g.maplocalleader = "\\"
 require("lazy").setup({
   spec = {
     -- add your plugins here
-    {"nvim-treesitter/nvim-treesitter", build = ":TSUpdate"}
+    { "nvim-treesitter/nvim-treesitter", build = ":TSUpdate" },
+    { "vim-jp/vimdoc-ja" }
   },
   -- Configure any other settings here. See the documentation for more details.
   -- colorscheme that will be used when installing plugins.
@@ -65,4 +66,5 @@ vim.opt.signcolumn = 'yes'
 vim.opt.ambiwidth = 'double'
 vim.opt.nrformats = 'unsigned,bin,hex'
 vim.cmd.colorscheme('desert')
+vim.opt.helplang = 'ja,en'
 
