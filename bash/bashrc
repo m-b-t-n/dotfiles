@@ -1,7 +1,7 @@
 # Global bashrc
 
 # Set environment vars
-export EDITOR='vim'
+export EDITOR='nvim'
 source ~/dotfiles/env/environment_vars
 
 # Readline
@@ -20,12 +20,12 @@ alias HHMM='date +"%H%M"'
 alias HH-MM-SS='date +"%H-%M-%S"'
 
 alias :b='vim -b'
-alias :e='vim'
-alias :esp='vim -o'
-alias :evsp='vim -O'
-alias :r='vim -R'
+alias :e='nvim'
+alias :esp='nvim -o'
+alias :evsp='nvim -O'
+alias :r='nvim -R'
 alias :q='exit'
-alias vd='vimdiff'
+alias vd='nvim -d'
 
 alias wezssh='wezterm cli spawn --domain-name'
 

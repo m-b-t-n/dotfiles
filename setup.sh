@@ -197,6 +197,13 @@ else
 	ln -sfv ~/dotfiles/editorconfig/editorconfig ~/.editorconfig
 fi
 
+# neovim
+if [[ "${DEBUG_MODE}" == "true" ]]; then
+	echo -e "\tln -sfv ~/dotfiles/neovim ~/.config/nvim"
+else
+	ln -sfv ~/dotfiles/neovim ~/.config/nvim
+fi
+
 echo "### Done. ###"
 exit 0
 
