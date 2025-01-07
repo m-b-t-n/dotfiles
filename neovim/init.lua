@@ -60,11 +60,6 @@ require("lazy").setup({
     -- add your plugins here
     { "nvim-treesitter/nvim-treesitter", build = ":TSUpdate" },
     { "vim-jp/vimdoc-ja" },
-    {
-       "m4xshen/hardtime.nvim",
-       dependencies = { "MunifTanjim/nui.nvim" },
-       opts = {}
-    },
     { 'echasnovski/mini.nvim', version = '*' },
   },
   -- Configure any other settings here. See the documentation for more details.
