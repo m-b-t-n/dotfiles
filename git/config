@@ -4,7 +4,7 @@
 	path = ~/dotfiles/env/git/proxy
 
 [core]
-	editor = vim
+	editor = nvim
 	quotepath = false
 
 [fetch]
