@@ -37,6 +37,8 @@ vim.opt.helplang = 'ja,en'
 vim.g.mapleader = " "
 vim.g.maplocalleader = "\\"
 
+vim.g.editorconfig = true
+
 -- Bootstrap lazy.nvim
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not (vim.uv or vim.loop).fs_stat(lazypath) then
