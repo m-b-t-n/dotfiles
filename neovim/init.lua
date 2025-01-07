@@ -60,6 +60,7 @@ vim.opt.rtp:prepend(lazypath)
 require("lazy").setup({
   spec = {
     -- add your plugins here
+    -- { import = "core" },
     { import = "plugins" },
   },
   -- Configure any other settings here. See the documentation for more details.
