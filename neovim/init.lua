@@ -60,8 +60,6 @@ require("lazy").setup({
     -- add your plugins here
     { import = "plugins" },
     { "nvim-treesitter/nvim-treesitter", build = ":TSUpdate" },
-    { "vim-jp/vimdoc-ja" },
-    { 'echasnovski/mini.nvim', version = '*' },
   },
   -- Configure any other settings here. See the documentation for more details.
   -- colorscheme that will be used when installing plugins.
