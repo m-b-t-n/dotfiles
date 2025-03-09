@@ -204,6 +204,13 @@ else
 	ln -sfv ~/dotfiles/neovim ~/.config/nvim
 fi
 
+# yazi
+if [[ "${DEBUG_MODE}" == "true" ]]; then
+	echo -e "\tln -sfv ~/dotfiles/yazi ~/.config/yazi"
+else
+	ln -sfv ~/dotfiles/yazi ~/.config/yazi
+fi
+
 echo "### Done. ###"
 exit 0
 
