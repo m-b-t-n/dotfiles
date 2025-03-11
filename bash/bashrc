@@ -12,6 +12,7 @@ alias cl='clear'
 alias rm='rm -i'
 alias mv='mv -v'
 alias cp='cp -v'
+alias pt='pstree -p $$'
 
 alias YYYYMMDD='date +"%Y%m%d"'
 alias YY-MM-DD='date +"%Y-%m-%d"'
