@@ -71,3 +71,5 @@ require("lualine").setup()
 require("core.neovide")
 require("core.firenvim")
 
+vim.diagnostic.config()
+
