@@ -18,7 +18,10 @@
 	ui = auto
 
 [diff]
-	tool = vimdiff
+	tool = nvim
+
+[difftool "nvim"]
+	cmd = "nvim -d --cmd 'set diffopt+=internal,iblank,algorithm:minimal' $LOCAL $REMOTE"
 
 [init]
 	defaultBranch = main
