@@ -18,3 +18,17 @@ function _docker() {
 	fi
 }
 
+alias docker-ri='command docker run -it'
+alias docker-rrm='command docker run --rm'
+alias docker-rrmi='command docker run --rm -it'
+
+# Show exited processes
+function docker-exitedps() {
+	command docker ps -f status=exited
+}
+
+# Show dangling images
+function docker-dangimages() {
+	command docker images -f dangling=true
+}
+
