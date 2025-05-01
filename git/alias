@@ -10,11 +10,14 @@
 	co = checkout
 	cm = commit
 	cme = commit --allow-empty
+	cmfx = commit --fixup
 	tar = archive --format=tar
 	df = diff
+	dfs = diff --staged
 	dfc = diff --cached
 	dfq = diff --quiet
 	dfn = diff --name-only
+	dfw = diff --word-diff
 	dt = difftool
 	cur-br = rev-parse --abbrev-ref @
 	cpk = cherry-pick
