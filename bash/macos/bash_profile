@@ -5,8 +5,8 @@ export PATH="/opt/homebrew/bin:$PATH"
 [[ -r "/opt/homebrew/etc/profile.d/bash_completion.sh" ]] \
 	&& . "/opt/homebrew/etc/profile.d/bash_completion.sh"
 
-# Node.js
-export PATH="$PATH:/Users/$(whoami)/.nodebrew/current/bin"
+# Node.js via nodebrew
+export PATH="$HOME/.nodebrew/current/bin:$PATH"
 
 # Ruby
 export PATH="/usr/local/opt/ruby/bin:$PATH"
