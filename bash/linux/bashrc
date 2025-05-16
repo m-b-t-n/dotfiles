@@ -22,7 +22,3 @@ alias lla='ls -laF'
 alias llh='ls -lhF'
 alias llah='ls -lahF'
 
-# ranger
-source $HOME/dotfiles/ranger/ranger.sh
-alias r='_ranger'
-
