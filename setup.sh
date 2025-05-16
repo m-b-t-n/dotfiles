@@ -1,11 +1,11 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 #
 # Functions;
 #
 
 function show_usage() {
-	echo "Usage: $(basename $0) [-dh]"
+	echo "Usage: $(basename "$0") [-dh]"
 	exit 1
 }
 
@@ -18,7 +18,7 @@ function get_os_type() {
 	fi
 
 	local environment
-	if echo "${host_os}" | grep -i ^mingw.* >/dev/null; then
+	if echo "${host_os}" | grep -i "^mingw.*" >/dev/null; then
 		environment="windows"
 	elif [[ "${host_os}" == "Linux" ]]; then
 		environment="linux"
@@ -62,10 +62,12 @@ function get_hostname() {
 
 function get_platform_env() {
 	local arg=$1
-	local os=$(get_os_type ${arg})
-	local name="$(get_hostname ${os})"
+	local os
+	os=$(get_os_type "${arg}")
+	local name
+	name="$(get_hostname "${os}")"
 
-	echo ${os} "${name}"
+	echo "${os}" "${name}"
 }
 
 #
@@ -92,8 +94,12 @@ echo "### Setup dotfiles ###"
 
 echo -n "### Check Environment... "
 if [[ "${DEBUG_MODE}" == "true" ]]; then
-	ENVIRONMENT=( $(get_platform_env ${DEBUG_HOST_OS}) )
+	# shellcheck disable=SC2207
+	# FIXME: adopt for SC2207
+	ENVIRONMENT=( $(get_platform_env "${DEBUG_HOST_OS}") )
 else
+	# shellcheck disable=SC2207
+	# FIXME: adopt for SC2207
 	ENVIRONMENT=( $(get_platform_env) )
 fi
 echo "OS=${ENVIRONMENT[0]} HOSTNAME=${ENVIRONMENT[1]} ###"
