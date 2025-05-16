@@ -34,11 +34,6 @@ alias wezssh='wezterm cli spawn --domain-name'
 source ~/dotfiles/ranger/ranger.sh
 alias r='_ranger'
 
-# broot
-if [[ ${DOTFILES_ENV_CONFIG_BROOT_ENABLE} == "y" ]]; then
-	source ~/.config/broot/launcher/bash/br
-fi
-
 # flutter
 if [[ ${DOTFILES_ENV_CONFIG_FLUTTER_ENABLE} == "y" ]]; then
 	source ~/dotfiles/bash/flutter_completion.bash

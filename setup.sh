@@ -163,17 +163,6 @@ else
 	ln -sfv ~/dotfiles/ranger/config ~/.config/ranger
 fi
 
-# broot
-if [[ "${DEBUG_MODE}" == "true" ]]; then
-	echo -e"echo \t\"DOTFILES_ENV_CONFIG_BROOT_ENABLE=y\" >> ~/dotfiles/env/environment_vars"
-	echo -e "\tln -sfv ~/dotfiles/broot ~/.config/broot"
-else
-	if [[ -e "/usr/local/bin/broot" ]]; then
-		echo "DOTFILES_ENV_CONFIG_BROOT_ENABLE=y" >> ~/dotfiles/env/environment_vars
-		ln -sfv ~/dotfiles/broot ~/.config/broot
-	fi
-fi
-
 # wezterm
 if [[ "${DEBUG_MODE}" == "true" ]]; then
 	echo -e "\tln -sfv ~/dotfiles/wezterm ~/.config/wezterm"
