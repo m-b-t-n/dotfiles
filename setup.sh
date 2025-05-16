@@ -156,13 +156,6 @@ else
 	ln -sfv ~/dotfiles/git ~/.config/git
 fi
 
-# ranger
-if [[ "${DEBUG_MODE}" == "true" ]]; then
-	echo -e "\tln -sfv ~/dotfiles/ranger/config ~/.config/ranger"
-else
-	ln -sfv ~/dotfiles/ranger/config ~/.config/ranger
-fi
-
 # wezterm
 if [[ "${DEBUG_MODE}" == "true" ]]; then
 	echo -e "\tln -sfv ~/dotfiles/wezterm ~/.config/wezterm"
