@@ -45,9 +45,8 @@ if [[ ${DOTFILES_ENV_CONFIG_FLUTTER_ENABLE} == "y" ]]; then
 fi
 
 # yazi
-if [[ ${DOTFILES_ENV_CONFIG_YAZI_ENABLE} == "y" ]]; then
-	alias y='yazi'
-fi
+source ~/dotfiles/yazi/yazi.sh
+alias y='_yazi'
 
 # docker
 source ~/dotfiles/docker/docker.sh
