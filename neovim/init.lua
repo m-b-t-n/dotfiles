@@ -70,6 +70,7 @@ require("lazy").setup({
 require("lualine").setup()
 require("core.neovide")
 require("core.firenvim")
+require("core.keymaps").setup()
 
 vim.diagnostic.config()
 
