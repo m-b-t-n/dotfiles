@@ -37,7 +37,7 @@ fi
 
 # yazi
 source ~/dotfiles/yazi/yazi.sh
-alias y='_yazi'
+alias y='_yazi_exec'
 
 # docker
 source ~/dotfiles/docker/docker.sh
