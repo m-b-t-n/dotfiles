@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
 
+# shellcheck source=/dev/null
 source ~/dotfiles/env/environment_vars
 
 if [[ ${DOTFILES_ENV_CONFIG_YAZI_ENABLE} == 'y' ]]; then
