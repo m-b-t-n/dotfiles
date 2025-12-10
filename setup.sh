@@ -144,15 +144,6 @@ else
 	ln -sfv dotfiles/bash/bashrc ~/.bashrc
 fi
 
-# vim
-if [[ "${DEBUG_MODE}" == "true" ]]; then
-	echo -e "\tln -sfv dotfiles/vim/vimrc ~/.vimrc"
-	echo -e "\tln -sfv dotfiles/vim/gvimrc ~/.gvimrc"
-else
-	ln -sfv dotfiles/vim/vimrc ~/.vimrc
-	ln -sfv dotfiles/vim/gvimrc ~/.gvimrc
-fi
-
 mkdir -p ~/.config
 
 # gitconfig
