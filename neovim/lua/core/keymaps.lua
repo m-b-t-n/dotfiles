@@ -32,6 +32,9 @@ M.setup = function()
         local default_font = "PlemolJP35 Medium:h16.5"
         vim.opt.guifont = default_font
     end, { desc = "Reset font size" })
+
+    -- Abbreviate :CodeCompanion
+    vim.cmd([[cab cc CodeCompanion]])
 end
 
 return M
