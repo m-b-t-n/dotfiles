@@ -7,10 +7,11 @@
 	br = branch
 	bd = branch -d
 	bD = branch -D
+	bm = branch -m
 	co = checkout
 	cm = commit
 	cme = commit --allow-empty
-	cmfx = commit --fixup
+	cmx = commit --fixup
 	tar = archive --format=tar
 	df = diff
 	dfs = diff --staged
@@ -24,6 +25,7 @@
 	hrst = reset --hard
 	srst = reset --soft
 	rst = reset
+	rt = restore
 	rb = rebase
 	ri = rebase -i
 	sw = switch
