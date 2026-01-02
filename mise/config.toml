@@ -1,3 +1,22 @@
 [tools]
 node = "24"
 python = "3"
+
+[tasks.homebrew-update]
+description = "Homebrew: Update packages info"
+run = '''
+  if [[ $(which brew) ]]; then
+    brew update -v
+  fi
+'''
+alias = 'bupd'
+
+[tasks.homebrew-upgrade]
+description = "Homebrew: Upgrade packages"
+run = '''
+  if [[ $(which brew) ]]; then
+    brew upgrade -v
+  fi
+'''
+alias = 'bupg'
+
