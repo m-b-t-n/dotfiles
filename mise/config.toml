@@ -20,3 +20,12 @@ run = '''
 '''
 alias = 'bupg'
 
+[tasks.mas-upgrade]
+description = "Mac App Store: Update apps"
+run = '''
+  if [[ $(which mas) ]]; then
+    mas upgrade
+  fi
+'''
+alias = 'mupg'
+
