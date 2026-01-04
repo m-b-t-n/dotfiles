@@ -2,6 +2,24 @@
 node = "24"
 python = "3"
 
+[tasks.git-update]
+description = "Git: Update dotfiles"
+run = '''
+  pushd $HOME/dotfiles
+  git fetch --verbose
+  popd
+'''
+alias = 'sync'
+
+[tasks.git-upgrade]
+description = "Git: Upgrade dotfiles"
+run = '''
+  pushd $HOME/dotfiles
+  git pull --verbose --prune
+  popd
+'''
+alias = 'upg'
+
 [tasks.homebrew-update]
 description = "Homebrew: Update packages info"
 run = '''
