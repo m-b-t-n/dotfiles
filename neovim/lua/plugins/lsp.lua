@@ -8,6 +8,7 @@ local lsp_servers = {
     "lua_ls",
     "eslint",
     "ts_ls",
+    "yamlls",
 }
 
 return {
