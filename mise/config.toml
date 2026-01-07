@@ -1,5 +1,6 @@
 [tools]
 node = "24"
+npm = "latest"
 python = "3"
 
 [tasks.git-update]
