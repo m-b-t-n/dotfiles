@@ -190,6 +190,13 @@ else
 	ln -sfv ~/dotfiles/yazi ~/.config/yazi
 fi
 
+# gitui
+if [[ "${DEBUG_MODE}" == "true" ]]; then
+	echo -e "\tln -sfv ~/dotfiles/gitui ~/.config/gitui"
+else
+	ln -sfv ~/dotfiles/gitui ~/.config/gitui
+fi
+
 echo "### Done. ###"
 exit 0
 
