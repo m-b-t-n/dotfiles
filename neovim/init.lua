@@ -26,6 +26,7 @@ vim.opt.fileencodings = 'utf-8,sjis,cp932,euc-jp'
 vim.opt.wildmenu = true
 vim.opt.signcolumn = 'yes'
 vim.opt.ambiwidth = 'double'
+vim.opt.winborder = 'single'
 vim.opt.nrformats = 'unsigned,bin,hex'
 vim.opt.helplang = 'ja,en'
 
