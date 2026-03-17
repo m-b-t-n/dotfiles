@@ -35,6 +35,16 @@ M.setup = function()
 
     -- Abbreviate :CodeCompanion
     vim.cmd([[cab cc CodeCompanion]])
+
+    -- Set QuickFix List
+    vim.keymap.set("n", "<leader>q", vim.diagnostic.setqflist,
+        {
+            desc = "Open diagnostic quickfix list"
+        }
+    )
+
+    -- プロジェクト全体（開いている全バッファ）のエラーを送る場合
+    -- vim.diagnostic.setqflist({ open = true, severity = vim.diagnostic.severity.ERROR })
 end
 
 return M
