@@ -3,10 +3,10 @@
 return {
     {
         "nvim-treesitter/nvim-treesitter",
+        branch = "main",
         build = ":TSUpdate",
-        opts = {
-            ensure_installed = "all",
-        },
+        config = function()
+        end,
     },
 }
 
