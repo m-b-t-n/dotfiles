@@ -22,5 +22,10 @@ if vim.g.neovide then
 
     -- Transparency
     vim.g.neovide_transparency = 0.9
+
+    -- Replace yen sign with backslash
+    vim.keymap.set('i', '¥', '\\')
+    vim.keymap.set('c', '¥', '\\')
+    vim.keymap.set('n', '¥', '\\')
 end
 
