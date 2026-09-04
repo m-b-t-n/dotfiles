@@ -16,6 +16,7 @@ return {
             elseif vim.fn.has('linux') == 1 then
                 vim.g.previm_open_cmd = '' -- TBW
             end
+            vim.g.previm_custom_css_path = vim.fn.expand("~/.config/nvim/lua/plugins/previm_custom.css")
         end,
         keys = {
             { "<C-p>", "<cmd>PrevimOpen<cr>", desc = "Preview Markdown" },
