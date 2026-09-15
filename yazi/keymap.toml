@@ -135,6 +135,8 @@ keymap = [
 	{ on = [ "g", "t" ],       run = "plugin trash",     desc = "Go to trash bin" },
 	{ on = [ "g", "<Space>" ], run = "cd --interactive", desc = "Jump interactively" },
 	{ on = [ "g", "f" ],       run = "follow",           desc = "Follow hovered symlink" },
+	{ on = [ "g", "w" ],       run = "cd ~/workspace",   desc = "Go to ~/workspace" },
+	{ on = [ "g", "." ],       run = "cd ~/dotfiles",    desc = "Go to ~/dotfiles" },
 
 	# Tabs
 	{ on = [ "t", "t" ], run = "tab_create --current",     desc = "Create a new tab in CWD" },
