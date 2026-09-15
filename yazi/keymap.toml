@@ -162,6 +162,10 @@ keymap = [
 	# Help
 	{ on = "~",    run = "help", desc = "Open help" },
 	{ on = "<F1>", run = "help", desc = "Open help" },
+
+	# Enter sub-shell
+	{ on = "!", for = "unix", run = "shell $SHELL --block", desc = "Open $SHELL here" },
+	{ on = "!", for = "windows", run = 'shell "powershell.exe" --block', desc = "Open PowerShell here" },
 ]
 
 [tasks]
