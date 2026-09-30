@@ -10,7 +10,7 @@ run = '''
   git fetch --verbose
   popd
 '''
-alias = 'sync'
+alias = 'gfetch'
 
 [tasks.git-upgrade]
 description = "Git: Upgrade dotfiles"
@@ -19,7 +19,7 @@ run = '''
   git pull --verbose --prune
   popd
 '''
-alias = 'upg'
+alias = 'gpull'
 
 [tasks.homebrew-update]
 description = "Homebrew: Update packages info"
@@ -28,7 +28,43 @@ run = '''
     brew update -v
   fi
 '''
-alias = 'bupd'
+alias = 'bfetch'
+
+[tasks.homebrew-clean]
+description = "Homebrew: Clean up old packages"
+run = '''
+  if [[ $(which brew) ]]; then
+    brew cleanup -v
+  fi
+'''
+alias = 'bclean'
+
+[tasks.apt-update]
+description = "APT: Update package info"
+run = '''
+  if [[ $(which apt) ]]; then
+    sudo apt update -y
+  fi
+'''
+alias = 'afetch'
+
+[tasks.apt-upgrade]
+description = "APT: Upgrade packages"
+run = '''
+  if [[ $(which apt) ]]; then
+    sudo apt upgrade -y
+  fi
+'''
+alias = 'apull'
+
+[tasks.apt-clean]
+description = "APT: Clean up old packages"
+run = '''
+  if [[ $(which apt) ]]; then
+    sudo apt autoremove -y
+    sudo apt autoclean -y
+  fi
+'''
 
 [tasks.homebrew-upgrade]
 description = "Homebrew: Upgrade packages"
@@ -37,7 +73,7 @@ run = '''
     brew upgrade -v
   fi
 '''
-alias = 'bupg'
+alias = 'bpull'
 
 [tasks.mas-upgrade]
 description = "Mac App Store: Update apps"
@@ -46,5 +82,23 @@ run = '''
     mas upgrade
   fi
 '''
-alias = 'mupg'
+alias = 'mpull'
+
+[tasks.all-update]
+description = "Update all tools and packages"
+depends = ["git-update", "apt-update", "homebrew-update"]
+run = "echo 'All tools and packages updated.'"
+alias = "fetch"
+
+[tasks.all-upgrade]
+description = "Upgrade all tools and packages"
+depends = ["git-upgrade", "apt-upgrade", "homebrew-upgrade"]
+run = "echo 'All tools and packages upgraded.'"
+alias = "pull"
+
+[tasks.all-clean]
+description = "Clean up all tools and packages"
+depends = ["apt-clean", "homebrew-clean"]
+run = "echo 'All tools and packages cleaned up.'"
+alias = "clean"
 
