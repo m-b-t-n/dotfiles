@@ -34,7 +34,7 @@ alias = 'bfetch'
 description = "Homebrew: Clean up old packages"
 run = '''
   if [[ $(which brew) ]]; then
-    brew cleanup -v
+    brew cleanup --prune=all -v
   fi
 '''
 alias = 'bclean'
