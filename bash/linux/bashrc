@@ -6,6 +6,9 @@ if [[ -f /etc/bash_completion ]]; then
        source /etc/bash_completion
 fi
 
+# Homebrew
+eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+
 # For "__git_ps1"
 # <http://d.hatena.ne.jp/gnarl/20110901/1314846241>
 GIT_PS1_SHOWDIRTYSTATE=1
