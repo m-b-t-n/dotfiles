@@ -7,7 +7,7 @@ local lsp_servers = {
     "bashls",
     "lua_ls",
     "eslint",
-    "tsserver",
+    "ts_ls",
     "yamlls",
 }
 
