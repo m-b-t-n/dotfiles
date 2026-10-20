@@ -1,5 +1,6 @@
 # Color Settings
 # export TERM=xterm-256color
+export PATH="$HOME/.local/bin:$PATH"
 
 # bash-completion
 if [[ -f /etc/bash_completion ]]; then

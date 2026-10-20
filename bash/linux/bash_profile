@@ -1,2 +1,3 @@
 # `export` statements should be set here
+export PATH="$HOME/.local/bin:$PATH"
 
