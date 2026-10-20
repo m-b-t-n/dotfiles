@@ -7,7 +7,21 @@ vim.opt.smartindent = true
 vim.opt.showmatch = true
 vim.opt.matchtime = 1
 -- vim.opt.t_Co = 256
-vim.opt.clipboard = 'unnamed,unnamedplus'
+if vim.fn.has("wsl") == 1 then
+  vim.g.clipboard = {
+    name = 'win32yank',
+    copy = {
+      ['+'] = 'win32yank.exe -i --crlf',
+      ['*'] = 'win32yank.exe -i --crlf',
+    },
+    paste = {
+      ['+'] = 'win32yank.exe -o --lf',
+      ['*'] = 'win32yank.exe -o --lf',
+    },
+    cache_enabled = 0,
+  }
+end
+vim.opt.clipboard = 'unnamedplus'
 vim.opt.list = true
 vim.opt.listchars = 'tab:> ,trail:_,nbsp:%,extends:>,precedes:<'
 vim.opt.cursorline = true
