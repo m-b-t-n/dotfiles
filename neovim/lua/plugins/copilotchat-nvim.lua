@@ -11,6 +11,18 @@ return {
                 branch = "master",
             },
         },
+        lazy = true,
+        cmd = {
+            "CopilotChat",
+            "CopilotChatFix",
+            "CopilotChatDocs",
+            "CopilotChatOpen",
+            "CopilotChatClose",
+            "CopilotChatReset",
+            "CopilotChatTests",
+            "CopilotChatToggle",
+            "CopilotChatExplain",
+        },
         build = "make tiktoken",
         opts = {
             show_help = "yes",

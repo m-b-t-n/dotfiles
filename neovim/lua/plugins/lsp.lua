@@ -14,9 +14,17 @@ local lsp_servers = {
 return {
     {
         "williamboman/mason.nvim",
+        cmd = {
+            "Mason",
+            "MasonInstall",
+            "MasonUpdate",
+        },
         dependencies = {
             "neovim/nvim-lspconfig",
-            "williamboman/mason-lspconfig.nvim",
+            {
+                "williamboman/mason-lspconfig.nvim",
+                lazy = true,
+            },
         },
         config = function()
             require("mason").setup()

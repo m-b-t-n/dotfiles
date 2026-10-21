@@ -2,6 +2,11 @@
 
 return {
     {
-        { "aklt/plantuml-syntax" },
+        "aklt/plantuml-syntax",
+        lazy = true,
+        ft = {
+            "plantuml",
+            "markdown",
+        },
     },
 }

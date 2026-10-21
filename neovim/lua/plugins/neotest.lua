@@ -9,6 +9,13 @@ return {
             "antoinemadec/FixCursorHold.nvim",
             "thenbe/neotest-playwright",
         },
+        lazy = true,
+        cmd = {
+            "Neotest",
+            "NeotestPlaywrightPreset",
+            "NeotestPlaywrightProject",
+            "NeotestPlaywrightRefresh",
+        },
         config = function()
             require("neotest").setup({
                 adapters = {
