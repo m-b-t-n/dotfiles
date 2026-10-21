@@ -83,8 +83,12 @@ require("lazy").setup({
 })
 
 require("lualine").setup()
-require("core.neovide")
-require("core.firenvim")
+if vim.g.neovide then
+  require("core.neovide")
+end
+if vim.g.started_by_firenvim then
+  require("core.firenvim")
+end
 require("core.keymaps").setup()
 
 vim.diagnostic.config()
