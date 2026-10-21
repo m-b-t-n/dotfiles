@@ -12,6 +12,10 @@ return {
             "hrsh7th/cmp-cmdline",
             "zbirenbaum/copilot-cmp",
         },
+        lazy = true,
+        event = {
+            "InsertEnter",
+        },
         config = function ()
             local cmp = require("cmp")
             local has_words_before = function()
