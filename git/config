@@ -6,6 +6,8 @@
 [core]
 	editor = nvim
 	quotepath = false
+	preloadindex = true
+	fscache = true
 
 [fetch]
 	prune = true
