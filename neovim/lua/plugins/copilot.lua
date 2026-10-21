@@ -6,13 +6,10 @@ return {
         cmd = "Copilot",
         opts = {
             suggestion = {
-                auto_trigger = true,
-                keymap = {
-                    accept = "<M-l>",
-                    next = "<M-]>",
-                    prev = "<M-[>",
-                    dismiss = "<C-]>",
-                },
+                enabled = false,
+            },
+            panel = {
+                enabled = false,
             },
         },
     },
