@@ -23,6 +23,13 @@ KEYS.binds = {
 		mods = 'LEADER|SHIFT',
 		action = wezterm.action.SpawnTab 'CurrentPaneDomain',
 	},
+        {
+                key = 'p',
+                mods = 'LEADER|SHIFT',
+                action = wezterm.action.SpawnCommandInNewTab {
+                    args = { "powershell.exe" },
+                },
+        },
 	{
 		key = 'h',
 		mods = 'LEADER|SHIFT',
