@@ -2,7 +2,11 @@
 
 if vim.g.neovide then
     -- Set GUI font
-    vim.opt.guifont = "PlemolJP35 Medium:h16.5"
+    if vim.fn.has('win64') then
+        vim.opt.guifont = "PlemolJP35 Console NF:h16.5"
+    else
+        vim.opt.guifont = "PlemolJP35 Medium:h16.5"
+    end
 
     -- Hidden GUI parts
     vim.cmd([[
