@@ -8,6 +8,7 @@
 	quotepath = false
 	preloadindex = true
 	fscache = true
+	autocrlf = false
 
 [fetch]
 	prune = true
