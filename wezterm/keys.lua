@@ -27,7 +27,7 @@ KEYS.binds = {
                 key = 'p',
                 mods = 'LEADER|SHIFT',
                 action = wezterm.action.SpawnCommandInNewTab {
-                    args = { "powershell.exe" },
+                    args = { "pwsh.exe" },
                 },
         },
 	{
