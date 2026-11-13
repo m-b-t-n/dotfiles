@@ -2,6 +2,7 @@
 node = "24"
 npm = "latest"
 python = "3"
+uv = "latest"
 
 [tasks.git-update]
 description = "Git: Update dotfiles"
