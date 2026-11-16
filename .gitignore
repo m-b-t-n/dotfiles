@@ -3,4 +3,5 @@
 test_setup.sh.log
 env/environment_vars
 env/git/*
+yazi/plugins/
 
